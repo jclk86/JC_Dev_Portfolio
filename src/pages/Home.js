@@ -35,7 +35,7 @@ export default function Home() {
                 theme === "dark" ? "text-gray-300" : "text-gray-800"
               } text-xl font-serif font-semibold tracking-wider uppercase`}
             >
-              Frontend Web Developer
+              Full-Stack Web Developer
             </p>
             <p className="text-gray-600 text-lg font-semibold text-justify">
               <Text tid="homeFrom" />

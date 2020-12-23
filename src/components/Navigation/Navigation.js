@@ -84,16 +84,16 @@ export default function Navigation() {
               theme === "dark" ? "text-white" : "text-black"
             } text-xl uppercase font-bold tracking-tighter leading-none`}
           >
-            Marco
+            John
             <div className="inline-flex mx-1 w-1 h-1 bg-red-500" />
-            Kochannek
+            Chan
           </h1>
           <h1
             className={`${
               theme === "dark" ? "text-gray-400" : "text-gray-800"
             } text-md tracking-wider leading-none`}
           >
-            Frontend Web Developer
+            Full-Stack Web Developer
           </h1>
         </div>
 
