@@ -77,7 +77,7 @@ export default function ParticleBackground() {
           },
           particles: {
             color: {
-              value: ["#351CAB", "#621A61"]
+              value: ["#158FEC", "#fe019a"]
             },
             lineLinked: {
               blink: false,

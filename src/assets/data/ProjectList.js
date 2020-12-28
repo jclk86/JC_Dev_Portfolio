@@ -1,5 +1,4 @@
 import React from "react";
-import PortfolioPage from "../../components/Projects/CustomProjects/PortfolioPage";
 import DefaultProject from "../../components/Projects/DefaultProject";
 import { Text } from "../../components/Multilanguage/Text";
 
@@ -24,10 +23,9 @@ import ppBack from "../pictures/PizzaPlace/ppBack.png";
 import firebaseLogo from "../pictures/firebaseLogo.png";
 
 const projectList = [
-  <PortfolioPage />,
 
   <DefaultProject
-    name={"Make Me Awesome"}
+    name={"Travelist"}
     imageFront={mmaOverview}
     imageBack={mmaLogin}
     githubLink={"https://github.com/th1rst/make-me-awesome"}
@@ -97,7 +95,7 @@ const projectList = [
   />,
 
   <DefaultProject
-    name={<Text tid="krsHeading" />}
+    name="Stocked"
     imageFront={ksrOverview}
     imageBack={ksrBack}
     githubLink={"https://github.com/th1rst/kaufmanns-recipe-site"}
@@ -149,7 +147,7 @@ const projectList = [
     ]}
   />,
   <DefaultProject
-    name={"Lambert Travel"}
+    name={"Livable"}
     imageFront={ltFront}
     imageBack={ltBack}
     githubLink={
@@ -200,7 +198,7 @@ const projectList = [
     ]}
   />,
   <DefaultProject
-    name={"Giphyclone"}
+    name={"Quiz App"}
     imageFront={gcBack}
     imageBack={gcFront}
     githubLink={
@@ -235,124 +233,7 @@ const projectList = [
         logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
       },
     ]}
-  />,
-  <DefaultProject
-    name={"Start Page"}
-    imageFront={spFront}
-    imageBack={spBack}
-    githubLink={
-      "https://github.com/th1rst/learning/tree/master/Projects/StartPage"
-    }
-    liveVersionLink={"https://kochannek.com/portfolio/startpage/"}
-    hasLoginCredentials={false}
-    projectShortDescription={<Text tid="spSubheading" />}
-    aboutProjectText={
-      <div>
-        <Text tid="aboutSp1" />
-        <br />
-        <br />
-        <div className="text-center">
-          <Text tid="aboutSp2" />
-          <br />
-          <br />
-          <ul>
-            <li>
-              - <Text tid="spListItem1" />
-            </li>
-            <li>
-              - <Text tid="spListItem2" />
-            </li>
-            <li>
-              - <Text tid="spListItem3" />
-            </li>
-            <li>
-              - <Text tid="spListItem4" />
-            </li>
-            <li>
-              - <Text tid="spListItem5" />
-            </li>
-            <li>
-              - <Text tid="spListItem6" />
-            </li>
-          </ul>
-        </div>
-        <br />
-        <br />
-        <Text tid="aboutSp3" />
-        <br />
-        <Text tid="aboutSp4" />
-        <br />
-        <br />
-        <Text tid="aboutSp5" />
-        <br />
-        <br />
-        <Text tid="aboutSp6" />
-      </div>
-    }
-    features={[
-      <Text tid="spFeature1" />,
-      <Text tid="spFeature2" />,
-      <Text tid="spFeature3" />,
-      <Text tid="spFeature4" />,
-      <Text tid="spFeature5" />,
-      <Text tid="spFeature6" />,
-    ]}
-    techStack={[
-      {
-        name: "HTML 5",
-        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
-      },
-      {
-        name: "JavaScript",
-        logo: (
-          <DiJavascript className="w-12 h-12" style={{ color: "#ddb440" }} />
-        ),
-      },
-      {
-        name: "CSS 3",
-        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
-        subtexts: ["Custom CSS"],
-      },
-    ]}
-  />,
-  <DefaultProject
-    name={<Text tid="jppHeading" />}
-    imageFront={ppBack}
-    imageBack={ppFront}
-    githubLink={
-      "https://github.com/th1rst/learning/tree/master/Projects/SampleRestaurant"
-    }
-    liveVersionLink={"https://kochannek.com/portfolio/restaurant/"}
-    hasLoginCredentials={false}
-    projectShortDescription={<Text tid="jppSubheading" />}
-    aboutProjectText={
-      <div>
-        <Text tid="aboutJpp1" />
-        <br />
-        <br />
-        <Text tid="aboutJpp2" />
-        <br />
-        <br />
-        <Text tid="aboutJpp3" />
-      </div>
-    }
-    features={[
-      <Text tid="jppFeature1" />,
-      <Text tid="jppFeature2" />,
-      <Text tid="jppFeature3" />,
-    ]}
-    techStack={[
-      {
-        name: "HTML 5",
-        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
-      },
-      {
-        name: "CSS 3",
-        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
-        subtexts: ["Custom CSS"],
-      },
-    ]}
-  />,
+  />
 ];
 
 export default projectList;
