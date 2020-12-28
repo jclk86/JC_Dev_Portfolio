@@ -29,7 +29,7 @@ export function AnimatedLogoLight() {
       </svg>
       {transitions.map(({ item, key, props }) =>
         item ? (
-          <animated.div style={props}>
+          <animated.div style={props} key={key}>
             <svg
               width={25}
               height={25}
@@ -43,7 +43,7 @@ export function AnimatedLogoLight() {
             </svg>
           </animated.div>
         ) : (
-          <animated.div style={props}>
+          <animated.div style={props} key={key}>
             <svg width={50} height={50}>
               <CircleGradient id="circleGradient-dashoffset" />
               <circle

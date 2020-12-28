@@ -3,8 +3,8 @@ import DefaultProject from "../../components/Projects/DefaultProject";
 import { Text } from "../../components/Multilanguage/Text";
 
 //Icons
-import { SiTailwindcss } from "react-icons/si";
-import { FaReact, FaCss3Alt, FaHtml5 } from "react-icons/fa";
+import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from "react-icons/fa";
+import { SiPostgresql, SiJest, SiAirbnb, SiJquery, SiGooglemaps } from "react-icons/si";
 import { DiJavascript } from "react-icons/di";
 
 //Pictures
@@ -16,14 +16,8 @@ import ltFront from "../pictures/LambertTravel/ltFront.png";
 import ltBack from "../pictures/LambertTravel/ltBack.png";
 import gcFront from "../pictures/GiphyClone/gcFront.png";
 import gcBack from "../pictures/GiphyClone/gcBack.png";
-import spFront from "../pictures/StartPage/spFront.png";
-import spBack from "../pictures/StartPage/spBack.png";
-import ppFront from "../pictures/PizzaPlace/ppFront.png";
-import ppBack from "../pictures/PizzaPlace/ppBack.png";
-import firebaseLogo from "../pictures/firebaseLogo.png";
 
 const projectList = [
-
   <DefaultProject
     name={"Travelist"}
     imageFront={mmaOverview}
@@ -64,33 +58,33 @@ const projectList = [
     ]}
     techStack={[
       {
+        name: "HTML5",
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
+      },
+      {
+        name: "CSS3",
+        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
+      },
+      {
         name: "React 16",
         logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
-        subtexts: ["React Router", "Context API"],
       },
       {
-        name: "Tailwind CSS",
-        logo: (
-          <SiTailwindcss className="w-12 h-12" style={{ color: "#38b2ac" }} />
-        ),
-        subtexts: ["Windmill UI", "Rainbow Components"],
+        name: "NodeJS",
+        logo: <FaNodeJs className="w-12 h-12" style={{ color: "#6cc24a" }} />,
       },
       {
-        name: "Firebase",
-        logo: <img className="w-12 h-12" src={firebaseLogo} alt="firebase" />,
-        subtexts: ["Firebase Auth", "Firestore"],
+        name: "Jest",
+        logo: <SiJest className="w-12 h-12" style={{ color: "A0475A" }} />,
       },
       {
-        name: "ApexCharts",
-        logo: (
-          <img
-            className="w-16 h-12"
-            src="https://camo.githubusercontent.com/234f6fe1b4fdef71cd8e1f5fbad043093d023dba/68747470733a2f2f617065786368617274732e636f6d2f6d656469612f72656163742d617065786368617274732e706e67"
-            alt="apexcharts"
-          />
-        ),
-        subtexts: ["Custom Sorting Algorithm"],
+        name: "Enzyme",
+        logo: <SiAirbnb className="w-12 h-12" style={{ color: "#FF585D" }} />,
       },
+      {
+        name: "PostgreSQL",
+        logo: <SiPostgresql className="w-12 h-12" style={{ color: "#008bb9" }} />
+      }
     ]}
   />,
 
@@ -124,26 +118,33 @@ const projectList = [
     ]}
     techStack={[
       {
+        name: "HTML5",
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
+      },
+      {
+        name: "CSS3",
+        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
+      },
+      {
         name: "React 16",
         logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
-        subtexts: ["React Router", "Context API"],
       },
       {
-        name: "CSS 3",
-        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
-        subtexts: ["Custom CSS", "React-Bootstrap"],
+        name: "NodeJS",
+        logo: <FaNodeJs className="w-12 h-12" style={{ color: "#6cc24a" }} />,
       },
       {
-        name: "Contentful",
-        logo: (
-          <img
-            className="w-12 h-12"
-            src="https://avatars1.githubusercontent.com/u/472182?s=280&v=4"
-            alt="contentful"
-          />
-        ),
-        subtexts: ["Database API"],
+        name: "Jest",
+        logo: <SiJest className="w-12 h-12" style={{ color: "A0475A" }} />,
       },
+      {
+        name: "Enzyme",
+        logo: <SiAirbnb className="w-12 h-12" style={{ color: "#FF585D" }} />,
+      },
+      {
+        name: "PostgreSQL",
+        logo: <SiPostgresql className="w-12 h-12" style={{ color: "#008bb9" }} />
+      }
     ]}
   />,
   <DefaultProject
@@ -175,25 +176,24 @@ const projectList = [
     ]}
     techStack={[
       {
-        name: "React 16",
-        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
-        subtexts: ["React Router", "Context API"],
+        name: "HTML5",
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
       },
       {
-        name: "CSS 3",
+        name: "CSS3",
         logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
-        subtexts: ["Custom CSS"],
       },
       {
-        name: "Contentful",
-        logo: (
-          <img
-            className="w-12 h-12"
-            src="https://avatars1.githubusercontent.com/u/472182?s=280&v=4"
-            alt="contentful"
-          />
-        ),
-        subtexts: ["Database API"],
+        name: "jQuery",
+        logo: <SiJquery className="w-12 h-12" style={{ color: " #0769AD" }} />,
+      },
+      {
+        name: "Vanilla JavaScript",
+        logo: <DiJavascript className="w-12 h-12" style={{ color: "#F0DB4F" }} />,
+      },
+      {
+        name: "Google Maps API",
+        logo: <SiGooglemaps className="w-12 h-12" style={{ color: "#DD4B3E" }} />,
       },
     ]}
   />,
@@ -224,13 +224,20 @@ const projectList = [
     ]}
     techStack={[
       {
-        name: "React 16",
-        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
-        subtexts: ["React Router", "Context API"],
+        name: "HTML5",
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
       },
       {
-        name: "CSS 3",
+        name: "CSS3",
         logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
+      },
+      {
+        name: "jQuery",
+        logo: <SiJquery className="w-12 h-12" style={{ color: " #0769AD" }} />,
+      },
+      {
+        name: "Vanilla JavaScript",
+        logo: <DiJavascript className="w-12 h-12" style={{ color: "#F0DB4F" }} />,
       },
     ]}
   />

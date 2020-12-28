@@ -229,7 +229,7 @@ export default function Navigation() {
         {!hidden ? (
           <animated.div
             style={{ opacity }}
-            className="w-full flex justify-center"
+            className="w-full flex justify-center lg:hidden"
           >
             <ul>
               {trail.map(({ opacity }, i) => {
