@@ -8,22 +8,19 @@ import { SiPostgresql, SiJest, SiAirbnb, SiJquery, SiGooglemaps } from "react-ic
 import { DiJavascript } from "react-icons/di";
 
 //Pictures
-import mmaLogin from "../pictures/MakeMeAwesome/mmaLogin.png";
-import mmaOverview from "../pictures/MakeMeAwesome/mmaOverview.png";
-import ksrOverview from "../pictures/KaufmannsRecipeSite/ksrOverview.png";
-import ksrBack from "../pictures/KaufmannsRecipeSite/ksrBack.png";
-import ltFront from "../pictures/LambertTravel/ltFront.png";
-import ltBack from "../pictures/LambertTravel/ltBack.png";
-import gcFront from "../pictures/GiphyClone/gcFront.png";
-import gcBack from "../pictures/GiphyClone/gcBack.png";
+import travelist from "../pictures/Travelist/Travelist.png";
+import stocked from "../pictures/Stocked/Stocked.png";
+import quizapp from "../pictures/QuizApp/QuizApp.jpg"
+import livable from "../pictures/Livable/Livable.jpg";
 
 const projectList = [
   <DefaultProject
     name={"Travelist"}
-    imageFront={mmaOverview}
-    imageBack={mmaLogin}
-    githubLink={"https://github.com/th1rst/make-me-awesome"}
-    liveVersionLink={"https://kochannek.com/portfolio/make-me-awesome/"}
+    imageFront={travelist}
+    imageBack={travelist}
+    githubLink={"https://github.com/jclk86/travelist-client"}
+    githubLink2={"https://github.com/jclk86/travelist-server"}
+    liveVersionLink={"https://travelist-client-clfox97sa.vercel.app/"}
     hasLoginCredentials={true}
     userLogin={"john@doe.com"}
     passwordLogin={"testuser123"}
@@ -37,7 +34,7 @@ const projectList = [
         <Text tid="aboutMma3" />{" "}
         <a
           className="text-blue-400 underline"
-          href="https://kochannek.com/portfolio/make-me-awesome-ionic"
+          href="https://travelist-client-clfox97sa.vercel.app/"
           rel="noopener noreferrer"
         >
           App-Version
@@ -90,11 +87,12 @@ const projectList = [
 
   <DefaultProject
     name="Stocked"
-    imageFront={ksrOverview}
-    imageBack={ksrBack}
-    githubLink={"https://github.com/th1rst/kaufmanns-recipe-site"}
+    imageFront={stocked}
+    imageBack={stocked}
+    githubLink={"https://github.com/jclk86/Stocked-Client"}
+    githubLink2={"https://github.com/jclk86/Stocked-server"}
     liveVersionLink={
-      "https://kochannek.com/portfolio/kaufmanns-rezeptsammlung/"
+      "https://stocked-client-end.vercel.app"
     }
     hasLoginCredentials={false}
     projectShortDescription={<Text tid="krsSubheading" />}
@@ -149,12 +147,12 @@ const projectList = [
   />,
   <DefaultProject
     name={"Livable"}
-    imageFront={ltFront}
-    imageBack={ltBack}
+    imageFront={livable}
+    imageBack={livable}
     githubLink={
-      "https://github.com/th1rst/learning/tree/master/Projects/lamberttravel"
+      "https://github.com/jclk86/Livable"
     }
-    liveVersionLink={"https://kochannek.com/portfolio/lamberttravel/"}
+    liveVersionLink={"https://jclk86.github.io/Livable/"}
     hasLoginCredentials={false}
     projectShortDescription={<Text tid="ltSubheading" />}
     aboutProjectText={
@@ -199,12 +197,12 @@ const projectList = [
   />,
   <DefaultProject
     name={"Quiz App"}
-    imageFront={gcBack}
-    imageBack={gcFront}
+    imageFront={quizapp}
+    imageBack={quizapp}
     githubLink={
-      "https://github.com/th1rst/learning/tree/master/Projects/giphyclone"
+      "https://github.com/jclk86/quiz-app"
     }
-    liveVersionLink={"https://kochannek.com/portfolio/giphyclone/"}
+    liveVersionLink={"https://jclk86.github.io/quiz-app/"}
     hasLoginCredentials={false}
     projectShortDescription={<Text tid="gcSubheading" />}
     aboutProjectText={

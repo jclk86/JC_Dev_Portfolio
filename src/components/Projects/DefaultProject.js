@@ -48,6 +48,7 @@ const DefaultProject = (props) => {
     imageFront,
     imageBack,
     githubLink,
+    githubLink2,
     liveVersionLink,
     hasLoginCredentials,
     userLogin,
@@ -130,10 +131,30 @@ const DefaultProject = (props) => {
                           >
                             <FaGithub className="w-12 h-12" />
                             <p className="mt-1 font-semibold">
-                              <Text tid="viewSource" />
+                              <Text tid="Client" />
                             </p>
                           </a>
                         </div>
+                        { githubLink2 && <div
+                          className={`${
+                            theme === "dark"
+                              ? "text-white hover:text-gray-500"
+                              : "text-gray-900 hover:text-gray-600"
+                          } cursor-pointer`}
+                        >
+                          {/* GITHUB */}
+                          <a
+                            className="flex flex-col items-center "
+                            href={githubLink2}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FaGithub className="w-12 h-12" />
+                            <p className="mt-1 font-semibold">
+                              <Text tid="Server" />
+                            </p>
+                          </a>
+                        </div> }
 
                         <div
                           className={`${
@@ -230,6 +251,20 @@ const DefaultProject = (props) => {
                     </p>
                   </a>
                 </div>
+                { githubLink2 && <div className="hover:text-gray-500 cursor-pointer">
+                  {/* GITHUB */}
+                  <a
+                    className="flex flex-col items-center "
+                    href={githubLink2}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub className="w-12 h-12" />
+                    <p className="my-1 font-semibold">
+                      <Text tid="viewSource" />
+                    </p>
+                  </a>
+                </div> }
 
                 <div className="hover:text-gray-500">
                   {/* LIVE VERSION */}
@@ -266,7 +301,7 @@ const DefaultProject = (props) => {
               <div className="flex flex-row flex-wrap justify-evenly font-semibold">
                 {techStack
                   ? techStack.map((item) => (
-                      <div className="my-4 mx-4 flex flex-col items-center text-center">
+                      <div className="my-4 mx-4 flex flex-col items-center text-center" key={Math.random() * 1000}>
                         {item.logo}
                         <div className="flex flex-col text-center">
                           <p className="mt-1 text-xl">{item.name}</p>
