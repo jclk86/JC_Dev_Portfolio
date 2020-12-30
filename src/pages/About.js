@@ -85,7 +85,7 @@ export default function About() {
             <div className="md:hidden mb-8">
               {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
               {BookList.map((book) => (
-                <div key={Math.random() * 1000}>
+                <div key={book}>
                   <div className="w-auto h-auto">
                     <p
                       className={`${
@@ -218,7 +218,7 @@ export default function About() {
       className={`${
         theme === "dark" ? "bg-black text-white" : "bg-white text-black"
       }
-    w-screen min-h-screen`}
+    w-full min-h-screen`}
     >
       <div className="w-full h-auto flex justify-center">
         <div className="p-12 w-full flex flex-col">
