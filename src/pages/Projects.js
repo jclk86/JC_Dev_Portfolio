@@ -48,7 +48,7 @@ export default function Projects() {
             <ul>
               {trail.map(({ opacity }, i) => {
                 return (
-                  <animated.li style={{ opacity }} key={Math.random() * 1000}>
+                  <animated.li style={{ opacity }} key={i}>
                     {projects[i]}
                   </animated.li>
                 );

@@ -235,7 +235,7 @@ export default function Navigation() {
               {trail.map(({ opacity }, i) => {
                 const item = mobileNavItems[i];
                 return (
-                  <animated.li style={{ opacity }} key={Math.random() * 1000}>
+                  <animated.li style={{ opacity }} key={i}>
                     <div className="w-full text-center font-semibold uppercase flex flex-col">
                       {item}
                     </div>

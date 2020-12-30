@@ -273,8 +273,8 @@ export default function PortfolioPage() {
               </span>
             </div>
             <ul className="w-full pb-4 grid grid-cols-1 lg:grid-cols-3 text-center text-sm font-semibold">
-              {features.map((item) => (
-                <li className="m-4 mx-auto text-md">
+              {features.map((item,i) => (
+                <li className="m-4 mx-auto text-md" key={i}>
                   <BsCheckCircle className="inline-flex mx-2 my-auto" />
                   {item}
                 </li>

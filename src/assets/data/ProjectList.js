@@ -4,20 +4,134 @@ import { Text } from "../../components/Multilanguage/Text";
 
 //Icons
 import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from "react-icons/fa";
-import { SiPostgresql, SiJest, SiAirbnb, SiJquery, SiGooglemaps } from "react-icons/si";
+import { SiPostgresql, SiJest, SiAirbnb, SiJquery, SiGooglemaps, SiTypescript, SiAndroid } from "react-icons/si";
 import { DiJavascript } from "react-icons/di";
+import Sanity from "../pictures/Sanity.jpg";
+import NextJS from "../pictures/NextJS.png";
+import Chakra from "../pictures/Chakra.jpg";
+import ReactNative from "../pictures/ReactNative.png";
+import Redux from "../pictures/Redux.png";
+import d3js from "../pictures/d3JS.jpg";
 
 //Pictures
 import travelist from "../pictures/Travelist/Travelist.png";
+import travelistgithub from "../pictures/Travelist/TravelistGithub.png";
 import stocked from "../pictures/Stocked/Stocked.png";
+import stockedgithub from "../pictures/Stocked/StockedGithub.png";
 import quizapp from "../pictures/QuizApp/QuizApp.jpg"
+import quizgithub from "../pictures/QuizApp/QuizGithub.png";
 import livable from "../pictures/Livable/Livable.jpg";
+import livablegithub from "../pictures/Livable/LivableGithub.png";
+import onboardlist from "../pictures/OnboardList/OnboardList.png"
+import onboardlistblog from "../pictures/OnboardList/OnboardListBlog.png"
+import growoplogin from "../pictures/GrowOp/GrowOPLogin.png";
+import growopplant from "../pictures/GrowOp/GrowOpPlant.png";
+
 
 const projectList = [
   <DefaultProject
+    name="OnboardList"
+    imageFront={onboardlist}
+    imageBack={onboardlistblog}
+    liveVersionLink={
+      "https://www.onboardlist.com/"
+    }
+    hasLoginCredentials={false}
+    projectShortDescription={<Text tid="krsSubheading" />}
+    aboutProjectText={
+      <div>
+        <Text tid="aboutKrs1" />
+        <br /> <br />
+        <Text tid="aboutKrs2" />
+      </div>
+    }
+    features={[
+      <Text tid="krsFeature1" />,
+      <Text tid="krsFeature2" />,
+      <Text tid="krsFeature3" />,
+      <Text tid="krsFeature4" />,
+      <Text tid="krsFeature5" />,
+      <Text tid="krsFeature6" />,
+      <Text tid="krsFeature7" />,
+      <Text tid="krsFeature8" />,
+      <Text tid="krsFeature9" />,
+    ]}
+    techStack={[
+      {
+        name: "Sanity",
+        logo: <img src={Sanity} className="w-12 h-12" alt="Sanity Logo" />,
+      },
+      {
+        name: "NextJS",
+        logo: <img src={NextJS} className="w-12 h-12" alt="NextJS Logo" />,
+      },
+      {
+        name: "React 16",
+        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
+      },
+      {
+        name: "TypeScript",
+        logo: <SiTypescript className="w-12 h-12" style={{ color: "#007ACC" }} />,
+      },
+      {
+        name: "Chakra",
+        logo: <img src={Chakra} className="w-12 h-12" alt="Chakra Logo" />,
+      },
+      {
+        name: "PostgreSQL",
+        logo: <SiPostgresql className="w-12 h-12" style={{ color: "#008bb9" }} />
+      }
+    ]}
+  />,
+
+  <DefaultProject
+    name="Grow Op"
+    imageFront={growoplogin}
+    imageBack={growopplant}
+    hasLoginCredentials={false}
+    projectShortDescription={<Text tid="krsSubheading" />}
+    aboutProjectText={
+      <div>
+        <Text tid="aboutKrs1" />
+        <br /> <br />
+        <Text tid="aboutKrs2" />
+      </div>
+    }
+    features={[
+      <Text tid="krsFeature1" />,
+      <Text tid="krsFeature2" />,
+      <Text tid="krsFeature3" />,
+      <Text tid="krsFeature4" />,
+      <Text tid="krsFeature5" />,
+      <Text tid="krsFeature6" />,
+      <Text tid="krsFeature7" />,
+      <Text tid="krsFeature8" />,
+      <Text tid="krsFeature9" />,
+    ]}
+    techStack={[
+      {
+        name: "React Native",
+        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
+      },
+      {
+        name: "Redux",
+        logo: <img src={Redux} className="w-12 h-12" alt="Redux Logo" />,
+      },
+      {
+        name: "D3.js",
+        logo: <img src={d3js} className="w-12 h-12" alt="D3.js logo" />,
+      },
+      {
+        name: "Android",
+        logo: <SiAndroid className="w-12 h-12" style={{ color: "#78C257" }} />,
+      },
+    ]}
+  />,
+
+  <DefaultProject
     name={"Travelist"}
     imageFront={travelist}
-    imageBack={travelist}
+    imageBack={travelistgithub}
     githubLink={"https://github.com/jclk86/travelist-client"}
     githubLink2={"https://github.com/jclk86/travelist-server"}
     liveVersionLink={"https://travelist-client-clfox97sa.vercel.app/"}
@@ -88,7 +202,7 @@ const projectList = [
   <DefaultProject
     name="Stocked"
     imageFront={stocked}
-    imageBack={stocked}
+    imageBack={stockedgithub}
     githubLink={"https://github.com/jclk86/Stocked-Client"}
     githubLink2={"https://github.com/jclk86/Stocked-server"}
     liveVersionLink={
@@ -148,7 +262,7 @@ const projectList = [
   <DefaultProject
     name={"Livable"}
     imageFront={livable}
-    imageBack={livable}
+    imageBack={livablegithub}
     githubLink={
       "https://github.com/jclk86/Livable"
     }
@@ -186,7 +300,7 @@ const projectList = [
         logo: <SiJquery className="w-12 h-12" style={{ color: " #0769AD" }} />,
       },
       {
-        name: "Vanilla JavaScript",
+        name: "JavaScript",
         logo: <DiJavascript className="w-12 h-12" style={{ color: "#F0DB4F" }} />,
       },
       {
@@ -198,7 +312,7 @@ const projectList = [
   <DefaultProject
     name={"Quiz App"}
     imageFront={quizapp}
-    imageBack={quizapp}
+    imageBack={quizgithub}
     githubLink={
       "https://github.com/jclk86/quiz-app"
     }
@@ -234,7 +348,7 @@ const projectList = [
         logo: <SiJquery className="w-12 h-12" style={{ color: " #0769AD" }} />,
       },
       {
-        name: "Vanilla JavaScript",
+        name: "JavaScript",
         logo: <DiJavascript className="w-12 h-12" style={{ color: "#F0DB4F" }} />,
       },
     ]}

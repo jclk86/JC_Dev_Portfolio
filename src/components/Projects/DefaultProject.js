@@ -115,71 +115,74 @@ const DefaultProject = (props) => {
                   <div className="absolute w-full h-full flex flex-col justify-center">
                     <div className="flex flex-col">
                       <div className="flex flex-row justify-evenly">
-                        <div
-                          className={`${
-                            theme === "dark"
-                              ? "text-white hover:text-gray-500"
-                              : "text-gray-900 hover:text-gray-600"
-                          } cursor-pointer`}
-                        >
-                          {/* GITHUB */}
-                          <a
-                            className="flex flex-col items-center "
-                            href={githubLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                       {  githubLink &&  <div
+                            className={`${
+                              theme === "dark"
+                                ? "text-white hover:text-gray-500"
+                                : "text-gray-900 hover:text-gray-600"
+                            } cursor-pointer`}
                           >
-                            <FaGithub className="w-12 h-12" />
-                            <p className="mt-1 font-semibold">
-                              <Text tid="Client" />
-                            </p>
-                          </a>
-                        </div>
+                            {/* GITHUB */}
+                            <a
+                              className="flex flex-col items-center "
+                              href={githubLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FaGithub className="w-12 h-12" style={{ color: "#6e5494" }} />
+                              <p className="mt-1 font-semibold">
+                                <Text tid="Client" />
+                              </p>
+                            </a>
+                          </div>
+                        }
                         { githubLink2 && <div
-                          className={`${
-                            theme === "dark"
-                              ? "text-white hover:text-gray-500"
-                              : "text-gray-900 hover:text-gray-600"
-                          } cursor-pointer`}
-                        >
-                          {/* GITHUB */}
-                          <a
-                            className="flex flex-col items-center "
-                            href={githubLink2}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            className={`${
+                              theme === "dark"
+                                ? "text-white hover:text-gray-500"
+                                : "text-gray-900 hover:text-gray-600"
+                            } cursor-pointer`}
                           >
-                            <FaGithub className="w-12 h-12" />
-                            <p className="mt-1 font-semibold">
-                              <Text tid="Server" />
-                            </p>
-                          </a>
-                        </div> }
+                            {/* GITHUB */}
+                            <a
+                              className="flex flex-col items-center "
+                              href={githubLink2}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FaGithub className="w-12 h-12" style={{ color: "#bd2c00" }} />
+                              <p className="mt-1 font-semibold">
+                                <Text tid="Server" />
+                              </p>
+                            </a>
+                          </div> 
+                        }
 
-                        <div
-                          className={`${
-                            theme === "dark"
-                              ? "text-white hover:text-gray-500"
-                              : "text-gray-900 hover:text-gray-600"
-                          } cursor-pointer`}
-                          aria-owns={open ? "mouse-over-popover" : undefined}
-                          aria-haspopup="true"
-                          onMouseEnter={handlePopoverOpen}
-                          onMouseLeave={handlePopoverClose}
-                        >
-                          {/* LIVE VERSION INCL. POPOVER FOR CREDENTIALS */}
-                          <a
-                            className="flex flex-col items-center "
-                            href={liveVersionLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        { liveVersionLink && <div
+                            className={`${
+                              theme === "dark"
+                                ? "text-white hover:text-gray-500"
+                                : "text-gray-900 hover:text-gray-600"
+                            } cursor-pointer`}
+                            aria-owns={open ? "mouse-over-popover" : undefined}
+                            aria-haspopup="true"
+                            onMouseEnter={handlePopoverOpen}
+                            onMouseLeave={handlePopoverClose}
                           >
-                            <FaGlobe className="w-12 h-12" />
-                            <p className="mt-1 font-semibold">
-                              <Text tid="viewLiveVersion" />
-                            </p>
-                          </a>
-                        </div>
+                            {/* LIVE VERSION INCL. POPOVER FOR CREDENTIALS */}
+                            <a
+                              className="flex flex-col items-center "
+                              href={liveVersionLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FaGlobe className="w-12 h-12" />
+                              <p className="mt-1 font-semibold">
+                                <Text tid="viewLiveVersion" />
+                              </p>
+                            </a>
+                          </div>
+                        }
                         {hasLoginCredentials ? (
                           <Popover
                             id="mouse-over-popover"
@@ -237,59 +240,63 @@ const DefaultProject = (props) => {
             >
               {/* CONTAINER FOR MOBILE GITHUB / LIVE VERSION, HIDDEN >md breakpoint*/}
               <div className="md:hidden mt-8 mb-4 flex flex-row justify-evenly">
-                <div className="hover:text-gray-500 cursor-pointer">
-                  {/* GITHUB */}
-                  <a
-                    className="flex flex-col items-center "
-                    href={githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGithub className="w-12 h-12" />
-                    <p className="my-1 font-semibold">
-                      <Text tid="viewSource" />
-                    </p>
-                  </a>
-                </div>
+                { githubLink && <div className="hover:text-gray-500 cursor-pointer">
+                    {/* GITHUB */}
+                    <a
+                      className="flex flex-col items-center "
+                      href={githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub className="w-12 h-12" style={{ color: "#6e5494" }} />
+                      <p className="my-1 font-semibold">
+                        <Text tid="viewSource" />
+                      </p>
+                    </a>
+                  </div> 
+                }
+
                 { githubLink2 && <div className="hover:text-gray-500 cursor-pointer">
                   {/* GITHUB */}
-                  <a
-                    className="flex flex-col items-center "
-                    href={githubLink2}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGithub className="w-12 h-12" />
-                    <p className="my-1 font-semibold">
-                      <Text tid="viewSource" />
-                    </p>
-                  </a>
-                </div> }
-
-                <div className="hover:text-gray-500">
-                  {/* LIVE VERSION */}
-                  <a
-                    className="flex flex-col items-center cursor-pointer"
-                    href={liveVersionLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaGlobe className="w-12 h-12" />
-                    <p className="my-1 font-semibold">
-                      <Text tid="viewLiveVersion" />
-                    </p>
-                  </a>
-                  {hasLoginCredentials ? (
-                    <div className="text-center">
-                      <p className="mt-2 text-sm font-semibold">Login:</p>
-                      <p className="text-xs italic">{userLogin}</p>
-                      <p className="mt-2 text-sm font-semibold">
-                        <Text tid="password" />
+                    <a
+                      className="flex flex-col items-center "
+                      href={githubLink2}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithub className="w-12 h-12" style={{ color: "#bd2c00" }} />
+                      <p className="my-1 font-semibold">
+                        <Text tid="viewSource" />
                       </p>
-                      <p className="text-xs italic">{passwordLogin}</p>
-                    </div>
-                  ) : null}
-                </div>
+                    </a>
+                  </div> 
+                }
+
+                { liveVersionLink && <div className="hover:text-gray-500">
+                  {/* LIVE VERSION */}
+                    <a
+                      className="flex flex-col items-center cursor-pointer"
+                      href={liveVersionLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGlobe className="w-12 h-12" />
+                      <p className="my-1 font-semibold">
+                        <Text tid="viewLiveVersion" />
+                      </p>
+                    </a>
+                    {hasLoginCredentials ? (
+                      <div className="text-center">
+                        <p className="mt-2 text-sm font-semibold">Login:</p>
+                        <p className="text-xs italic">{userLogin}</p>
+                        <p className="mt-2 text-sm font-semibold">
+                          <Text tid="password" />
+                        </p>
+                        <p className="text-xs italic">{passwordLogin}</p>
+                      </div>
+                    ) : null}
+                  </div>
+                  }
               </div>
 
               <p className="mt-4 text-xl text-center font-semibold uppercase tracking-wide text-blue-400">
@@ -300,8 +307,8 @@ const DefaultProject = (props) => {
               </p>
               <div className="flex flex-row flex-wrap justify-evenly font-semibold">
                 {techStack
-                  ? techStack.map((item) => (
-                      <div className="my-4 mx-4 flex flex-col items-center text-center" key={Math.random() * 1000}>
+                  ? techStack.map((item,i) => (
+                      <div className="my-4 mx-4 flex flex-col items-center text-center" key={i}>
                         {item.logo}
                         <div className="flex flex-col text-center">
                           <p className="mt-1 text-xl">{item.name}</p>
