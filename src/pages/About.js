@@ -6,6 +6,7 @@ import { Text } from "../components/Multilanguage/Text";
 import { BookList } from "../assets/data/BookList";
 import { SkillList } from "../assets/data/SkillList";
 import SpringContainer from "../components/SpringContainer";
+import { v4 as uuidv4 } from 'uuid';
 
 //SVGs + PNGs
 import { BookSVG } from "../assets/svg/components/BookSVG.js";
@@ -85,7 +86,7 @@ export default function About() {
             <div className="md:hidden mb-8">
               {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
               {BookList.map((book) => (
-                <div key={book}>
+                <div key={uuidv4()}>
                   <div className="w-auto h-auto">
                     <p
                       className={`${
@@ -202,7 +203,7 @@ export default function About() {
       </div>
       <div className="text-white font-bold uppercase mt-6 w-full border-2 border-gray-800 rounded-lg flex flex-row flex-wrap justify-around items-center mb-12 shadow-xl">
         {SkillList.map((skill) => (
-          <div key={Math.random() * 1000} className="m-4 h-32 w-32 border-2 border-gray-800 bg-gray-900 rounded-full flex flex-col justify-center items-center">
+          <div key={uuidv4()} className="m-4 h-32 w-32 border-2 border-gray-800 bg-gray-900 rounded-full flex flex-col justify-center items-center">
             {skill.logo}
             <p className="tracking-wider text-sm uppercase">{skill.name}</p>
           </div>
@@ -227,7 +228,7 @@ export default function About() {
               <ul>
                 {trail.map(({ opacity }, i) => {
                   return (
-                    <animated.li style={{ opacity }} key={Math.random() * 1000}>
+                    <animated.li style={{ opacity }} key={uuidv4()}>
                       {trailItems[i]}
                     </animated.li>
                   );

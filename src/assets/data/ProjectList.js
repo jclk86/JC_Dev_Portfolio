@@ -111,7 +111,7 @@ const projectList = [
     techStack={[
       {
         name: "React Native",
-        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
+        logo: <img src={ReactNative} className="w-12 h-12" alt="React native Logo" />,
       },
       {
         name: "Redux",

@@ -35,9 +35,9 @@ export default function Contact() {
             <Text tid="contactFormCookieText2" />{" "}
             <a
               className="cursor-pointer underline text-blue-400"
-              href="mailto:code@kochannek.com"
+              href="mailto:chanjohndeveloper@gmail.com"
             >
-              code@kochannek.com
+              chanjohndeveloper@gmail.com
             </a>
           </p>
           <p className="pt-12 text-center">

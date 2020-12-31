@@ -5,6 +5,7 @@ import { Transition } from "@tailwindui/react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Text } from "../Multilanguage/Text";
 import { ThemeContext } from "../DarkMode/ThemeProvider";
+import { v4 as uuidv4 } from 'uuid';
 
 //Icons
 import { BiListCheck } from "react-icons/bi";
@@ -307,14 +308,14 @@ const DefaultProject = (props) => {
               </p>
               <div className="flex flex-row flex-wrap justify-evenly font-semibold">
                 {techStack
-                  ? techStack.map((item,i) => (
-                      <div className="my-4 mx-4 flex flex-col items-center text-center" key={i}>
+                  ? techStack.map((item) => (
+                      <div className="my-4 mx-4 flex flex-col items-center text-center" key={uuidv4()}>
                         {item.logo}
                         <div className="flex flex-col text-center">
                           <p className="mt-1 text-xl">{item.name}</p>
                           {item.subtexts
                             ? item.subtexts.map((subtext) => (
-                                <p className="mt-1 text-xs">{subtext}</p>
+                                <p className="mt-1 text-xs" key={uuidv4()}>{subtext}</p>
                               ))
                             : null}
                         </div>
@@ -393,7 +394,7 @@ const DefaultProject = (props) => {
             </div>
             <ul className="w-full pb-4 grid grid-cols-1 lg:grid-cols-3 text-center text-sm font-semibold">
               {features.map((item) => (
-                <li className="m-4 mx-auto text-md" key={item}>
+                <li className="m-4 mx-auto text-md" key={uuidv4()}>
                   <BsCheckCircle className="inline-flex mx-2 my-auto" />
                   {item}
                 </li>

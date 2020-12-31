@@ -14,7 +14,7 @@ import { ThemeContext } from "../components/DarkMode/ThemeProvider";
 import { Link } from "react-router-dom";
 
 const formID = process.env.REACT_APP_FORM_ID;
-
+// TODO: https://help.formspree.io/hc/en-us/articles/360022811154
 //React-Rainbow-Component adjusted to personal needs
 class ContactForm extends React.Component {
   static contextType = ThemeContext;
@@ -106,9 +106,8 @@ class ContactForm extends React.Component {
       reload = true;
     }
     if (checkboxError !== false) {
-      error.checkboxError = <Text tid="fieldRequired" />;
       reload = true;
-    }
+    } 
     if (reload) {
       this.setState({ ...error });
     } else {
@@ -210,7 +209,7 @@ class ContactForm extends React.Component {
                 />
                 <div className="mt-4">
                   <CheckboxGroup
-                    error={checkboxError}
+                    error={checkboxError ? <Text tid="fieldRequired" /> : null}
                     options={[
                       {
                         value: "checkboxOne",
