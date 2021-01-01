@@ -6,6 +6,7 @@ import { Text } from "../components/Multilanguage/Text";
 import { BookList } from "../assets/data/BookList";
 import { SkillList } from "../assets/data/SkillList";
 import SpringContainer from "../components/SpringContainer";
+import { v4 as uuidv4 } from 'uuid';
 
 //SVGs + PNGs
 import { BookSVG } from "../assets/svg/components/BookSVG.js";
@@ -31,29 +32,29 @@ export default function About() {
       {/* ----- ITEM 1 -----*/}
       <div className="flex flex-row justify-start items-center">
         <div className="w-10 h-1 inline-flex bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-lg" />
-        <p className="text-2xl font-bold uppercase ml-10 inline-flex">
+        <div className="text-2xl font-bold uppercase ml-10 inline-flex">
           <Text tid="whoIamHeading" />
-        </p>
+        </div>
       </div>
       <div className="mt-6 flex flex-col md:flex-row items-center mb-12">
         <div className="justify-self-start self-center h-40 w-full flex items-center justify-center">
           <ProfilePicture />
         </div>
-        <p className="font-semibold tracking-tight leading-7 text-justify md:p-4 md:ml-10 inline-flex">
+        <div className="font-semibold tracking-tight leading-7 text-justify md:p-4 md:ml-10 inline-flex">
           <Text tid="whoIamText1" />
           <br />
           <Text tid="whoIamText2" />
           <br />
-        </p>
+        </div>
       </div>
     </div>,
     <div>
       {/* ----- ITEM 2 -----*/}
       <div className="flex flex-row justify-start items-center">
         <div className="w-10 h-1 inline-flex bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-lg" />
-        <p className="text-2xl font-bold uppercase ml-10 inline-flex">
+        <div className="text-2xl font-bold uppercase ml-10 inline-flex">
           <Text tid="passions" />
-        </p>
+        </div>
       </div>
       <div className="mt-6 mb-12 w-full flex flex-row border-2 border-gray-800 rounded-lg shadow-xl">
         <div className="flex flex-col w-full">
@@ -68,11 +69,11 @@ export default function About() {
 
             <div className="md:hidden mb-8">
               {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
-              <p className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
+              <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
                 <Text tid="codingText1" />
                 <br />
                 <Text tid="codingText2" />
-              </p>
+              </div>
             </div>
 
             <div
@@ -85,7 +86,7 @@ export default function About() {
             <div className="md:hidden mb-8">
               {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
               {BookList.map((book) => (
-                <>
+                <div key={uuidv4()}>
                   <div className="w-auto h-auto">
                     <p
                       className={`${
@@ -104,12 +105,12 @@ export default function About() {
                   </div>
                   <Link to={`/previewer/${book.shortName}`}>
                     <div className="mt-2 mb-10 flex flex-row items-center justify-center mx-auto bg-blue-400 h-10 w-32 rounded-xl p-4 text-white">
-                      <p className="font-semibold text-base tracking-wide">
+                      <div className="font-semibold text-base tracking-wide">
                         <Text tid="readNow" />
-                      </p>
+                      </div>
                     </div>
                   </Link>
-                </>
+                </div>
               ))}
             </div>
             <div
@@ -121,7 +122,7 @@ export default function About() {
             </div>
             <div className="md:hidden mb-8">
               {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
-              <p className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
+              <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
                 <Text tid="dogsText1" />
                 <br />
                 <Text tid="dogsText2" />{" "}
@@ -140,12 +141,12 @@ export default function About() {
                 <Text tid="dogsText5" />
                 <br />
                 <br />
-                <p className="italic text-center">
+                <div className="italic text-center">
                   &quot;
                   <Text tid="dogsText6" />
                   &quot;
-                </p>
-              </p>
+                </div>
+              </div>
             </div>
           </div>
           <div className="hidden md:flex flex-row w-full px-12 py-4 font-semibold tracking-tight leading-7 text-justify">
@@ -164,7 +165,7 @@ export default function About() {
             ) : null}
 
             {visibleText === "dogs" ? (
-              <p className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
+              <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
                 <Text tid="dogsText1" />
                 <br />
                 <Text tid="dogsText2" />{" "}
@@ -183,12 +184,12 @@ export default function About() {
                 <Text tid="dogsText5" />
                 <br />
                 <br />
-                <p className="italic text-center">
+                <div className="italic text-center">
                   &quot;
                   <Text tid="dogsText6" />
                   &quot;
-                </p>
-              </p>
+                </div>
+              </div>
             ) : null}
           </div>
         </div>
@@ -202,7 +203,7 @@ export default function About() {
       </div>
       <div className="text-white font-bold uppercase mt-6 w-full border-2 border-gray-800 rounded-lg flex flex-row flex-wrap justify-around items-center mb-12 shadow-xl">
         {SkillList.map((skill) => (
-          <div className="m-4 h-32 w-32 border-2 border-gray-800 bg-gray-900 rounded-full flex flex-col justify-center items-center">
+          <div key={uuidv4()} className="m-4 h-32 w-32 border-2 border-gray-800 bg-gray-900 rounded-full flex flex-col justify-center items-center">
             {skill.logo}
             <p className="tracking-wider text-sm uppercase">{skill.name}</p>
           </div>
@@ -218,7 +219,7 @@ export default function About() {
       className={`${
         theme === "dark" ? "bg-black text-white" : "bg-white text-black"
       }
-    w-screen min-h-screen`}
+    w-full min-h-screen`}
     >
       <div className="w-full h-auto flex justify-center">
         <div className="p-12 w-full flex flex-col">
@@ -227,7 +228,7 @@ export default function About() {
               <ul>
                 {trail.map(({ opacity }, i) => {
                   return (
-                    <animated.li style={{ opacity }} key={Math.random() * 1000}>
+                    <animated.li style={{ opacity }} key={uuidv4()}>
                       {trailItems[i]}
                     </animated.li>
                   );

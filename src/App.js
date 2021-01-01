@@ -9,7 +9,6 @@ import About from "./pages/About";
 import Navigation from "./components/Navigation/Navigation";
 import Footer from "./components/Footer";
 import BookPreviewer from "./pages/BookPreviewer";
-import ImprintPrivacyPolicy from "./pages/ImprintPrivacyPolicy";
 
 const App = () => {
   const { userLanguageChange } = useContext(LanguageContext);
@@ -29,7 +28,6 @@ const App = () => {
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/about" component={About} />
-        <Route exact path="/imprintprivacypolicy" component={ImprintPrivacyPolicy} />
         <Route exact path="/previewer/:slug" component={BookPreviewer} />
         <Route component={Error404} />
       </Switch>

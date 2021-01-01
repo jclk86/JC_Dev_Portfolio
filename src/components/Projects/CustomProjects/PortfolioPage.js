@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, createRef } from "react";
 import { Transition } from "@tailwindui/react";
 import { useSpring, animated } from "react-spring";
 import { GradientPinkBlue as CircleGradient } from "@vx/gradient";
 import { Text } from "../../Multilanguage/Text";
 import { ThemeContext } from "../../DarkMode/ThemeProvider";
+import { v4 as uuidv4 } from 'uuid';
 
 //Icons
 import { SiTailwindcss } from "react-icons/si";
@@ -27,11 +28,9 @@ const features = [
 
 export default function PortfolioPage() {
   const { theme } = React.useContext(ThemeContext);
-
   const [moreInfoVisible, setMoreInfoVisible] = useState(false);
   const [hoveredFeaturesButton, setHoveredFeaturesButton] = useState(false);
   const [fade, setfade] = useState(false);
-
   const { opacity } = useSpring({
     config: { duration: 500 },
     opacity: fade ? 1 : 0,
@@ -274,7 +273,7 @@ export default function PortfolioPage() {
             </div>
             <ul className="w-full pb-4 grid grid-cols-1 lg:grid-cols-3 text-center text-sm font-semibold">
               {features.map((item) => (
-                <li className="m-4 mx-auto text-md">
+                <li className="m-4 mx-auto text-md" key={uuidv4()}>
                   <BsCheckCircle className="inline-flex mx-2 my-auto" />
                   {item}
                 </li>

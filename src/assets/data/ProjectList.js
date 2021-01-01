@@ -1,108 +1,40 @@
 import React from "react";
-import PortfolioPage from "../../components/Projects/CustomProjects/PortfolioPage";
 import DefaultProject from "../../components/Projects/DefaultProject";
 import { Text } from "../../components/Multilanguage/Text";
 
 //Icons
-import { SiTailwindcss } from "react-icons/si";
-import { FaReact, FaCss3Alt, FaHtml5 } from "react-icons/fa";
+import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from "react-icons/fa";
+import { SiPostgresql, SiJest, SiAirbnb, SiJquery, SiGooglemaps, SiTypescript, SiAndroid } from "react-icons/si";
 import { DiJavascript } from "react-icons/di";
+import Sanity from "../pictures/Sanity.jpg";
+import NextJS from "../pictures/NextJS.png";
+import Chakra from "../pictures/Chakra.jpg";
+import ReactNative from "../pictures/ReactNative.png";
+import Redux from "../pictures/Redux.png";
+import d3js from "../pictures/d3JS.jpg";
 
 //Pictures
-import mmaLogin from "../pictures/MakeMeAwesome/mmaLogin.png";
-import mmaOverview from "../pictures/MakeMeAwesome/mmaOverview.png";
-import ksrOverview from "../pictures/KaufmannsRecipeSite/ksrOverview.png";
-import ksrBack from "../pictures/KaufmannsRecipeSite/ksrBack.png";
-import ltFront from "../pictures/LambertTravel/ltFront.png";
-import ltBack from "../pictures/LambertTravel/ltBack.png";
-import gcFront from "../pictures/GiphyClone/gcFront.png";
-import gcBack from "../pictures/GiphyClone/gcBack.png";
-import spFront from "../pictures/StartPage/spFront.png";
-import spBack from "../pictures/StartPage/spBack.png";
-import ppFront from "../pictures/PizzaPlace/ppFront.png";
-import ppBack from "../pictures/PizzaPlace/ppBack.png";
-import firebaseLogo from "../pictures/firebaseLogo.png";
+import travelist from "../pictures/Travelist/Travelist.png";
+import travelistgithub from "../pictures/Travelist/TravelistGithub.png";
+import stocked from "../pictures/Stocked/Stocked.png";
+import stockedgithub from "../pictures/Stocked/StockedGithub.png";
+import quizapp from "../pictures/QuizApp/QuizApp.jpg"
+import quizgithub from "../pictures/QuizApp/QuizGithub.png";
+import livable from "../pictures/Livable/Livable.jpg";
+import livablegithub from "../pictures/Livable/LivableGithub.png";
+import onboardlist from "../pictures/OnboardList/OnboardList.png"
+import onboardlistblog from "../pictures/OnboardList/OnboardListBlog.png"
+import growoplogin from "../pictures/GrowOp/GrowOPLogin.png";
+import growopplant from "../pictures/GrowOp/GrowOpPlant.png";
+
 
 const projectList = [
-  <PortfolioPage />,
-
   <DefaultProject
-    name={"Make Me Awesome"}
-    imageFront={mmaOverview}
-    imageBack={mmaLogin}
-    githubLink={"https://github.com/th1rst/make-me-awesome"}
-    liveVersionLink={"https://kochannek.com/portfolio/make-me-awesome/"}
-    hasLoginCredentials={true}
-    userLogin={"john@doe.com"}
-    passwordLogin={"testuser123"}
-    projectShortDescription={<Text tid="mmaSubheading" />}
-    aboutProjectText={
-      <div>
-        <Text tid="aboutMma1" />
-        <br /> <br />
-        <Text tid="aboutMma2" />
-        <br /> <br />
-        <Text tid="aboutMma3" />{" "}
-        <a
-          className="text-blue-400 underline"
-          href="https://kochannek.com/portfolio/make-me-awesome-ionic"
-          rel="noopener noreferrer"
-        >
-          App-Version
-        </a>{" "}
-        <Text tid="aboutMma4" />
-      </div>
-    }
-    features={[
-      <Text tid="mmaFeature1" />,
-      <Text tid="mmaFeature2" />,
-      <Text tid="mmaFeature3" />,
-      <Text tid="mmaFeature4" />,
-      <Text tid="mmaFeature5" />,
-      <Text tid="mmaFeature6" />,
-      <Text tid="mmaFeature7" />,
-      <Text tid="mmaFeature8" />,
-      <Text tid="mmaFeature9" />,
-    ]}
-    techStack={[
-      {
-        name: "React 16",
-        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
-        subtexts: ["React Router", "Context API"],
-      },
-      {
-        name: "Tailwind CSS",
-        logo: (
-          <SiTailwindcss className="w-12 h-12" style={{ color: "#38b2ac" }} />
-        ),
-        subtexts: ["Windmill UI", "Rainbow Components"],
-      },
-      {
-        name: "Firebase",
-        logo: <img className="w-12 h-12" src={firebaseLogo} alt="firebase" />,
-        subtexts: ["Firebase Auth", "Firestore"],
-      },
-      {
-        name: "ApexCharts",
-        logo: (
-          <img
-            className="w-16 h-12"
-            src="https://camo.githubusercontent.com/234f6fe1b4fdef71cd8e1f5fbad043093d023dba/68747470733a2f2f617065786368617274732e636f6d2f6d656469612f72656163742d617065786368617274732e706e67"
-            alt="apexcharts"
-          />
-        ),
-        subtexts: ["Custom Sorting Algorithm"],
-      },
-    ]}
-  />,
-
-  <DefaultProject
-    name={<Text tid="krsHeading" />}
-    imageFront={ksrOverview}
-    imageBack={ksrBack}
-    githubLink={"https://github.com/th1rst/kaufmanns-recipe-site"}
+    name="OnboardList"
+    imageFront={onboardlist}
+    imageBack={onboardlistblog}
     liveVersionLink={
-      "https://kochannek.com/portfolio/kaufmanns-rezeptsammlung/"
+      "https://www.onboardlist.com/"
     }
     hasLoginCredentials={false}
     projectShortDescription={<Text tid="krsSubheading" />}
@@ -126,36 +58,215 @@ const projectList = [
     ]}
     techStack={[
       {
+        name: "Sanity",
+        logo: <img src={Sanity} className="w-12 h-12" alt="Sanity Logo" />,
+      },
+      {
+        name: "NextJS",
+        logo: <img src={NextJS} className="w-12 h-12" alt="NextJS Logo" />,
+      },
+      {
         name: "React 16",
         logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
-        subtexts: ["React Router", "Context API"],
       },
       {
-        name: "CSS 3",
-        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
-        subtexts: ["Custom CSS", "React-Bootstrap"],
+        name: "TypeScript",
+        logo: <SiTypescript className="w-12 h-12" style={{ color: "#007ACC" }} />,
       },
       {
-        name: "Contentful",
-        logo: (
-          <img
-            className="w-12 h-12"
-            src="https://avatars1.githubusercontent.com/u/472182?s=280&v=4"
-            alt="contentful"
-          />
-        ),
-        subtexts: ["Database API"],
+        name: "Chakra",
+        logo: <img src={Chakra} className="w-12 h-12" alt="Chakra Logo" />,
+      },
+      {
+        name: "PostgreSQL",
+        logo: <SiPostgresql className="w-12 h-12" style={{ color: "#008bb9" }} />
+      }
+    ]}
+  />,
+
+  <DefaultProject
+    name="Grow Op"
+    imageFront={growoplogin}
+    imageBack={growopplant}
+    hasLoginCredentials={false}
+    projectShortDescription={<Text tid="krsSubheading" />}
+    aboutProjectText={
+      <div>
+        <Text tid="aboutKrs1" />
+        <br /> <br />
+        <Text tid="aboutKrs2" />
+      </div>
+    }
+    features={[
+      <Text tid="krsFeature1" />,
+      <Text tid="krsFeature2" />,
+      <Text tid="krsFeature3" />,
+      <Text tid="krsFeature4" />,
+      <Text tid="krsFeature5" />,
+      <Text tid="krsFeature6" />,
+      <Text tid="krsFeature7" />,
+      <Text tid="krsFeature8" />,
+      <Text tid="krsFeature9" />,
+    ]}
+    techStack={[
+      {
+        name: "React Native",
+        logo: <img src={ReactNative} className="w-12 h-12" alt="React native Logo" />,
+      },
+      {
+        name: "Redux",
+        logo: <img src={Redux} className="w-12 h-12" alt="Redux Logo" />,
+      },
+      {
+        name: "D3.js",
+        logo: <img src={d3js} className="w-12 h-12" alt="D3.js logo" />,
+      },
+      {
+        name: "Android",
+        logo: <SiAndroid className="w-12 h-12" style={{ color: "#78C257" }} />,
       },
     ]}
   />,
+
   <DefaultProject
-    name={"Lambert Travel"}
-    imageFront={ltFront}
-    imageBack={ltBack}
-    githubLink={
-      "https://github.com/th1rst/learning/tree/master/Projects/lamberttravel"
+    name={"Travelist"}
+    imageFront={travelist}
+    imageBack={travelistgithub}
+    githubLink={"https://github.com/jclk86/travelist-client"}
+    githubLink2={"https://github.com/jclk86/travelist-server"}
+    liveVersionLink={"https://travelist-client-clfox97sa.vercel.app/"}
+    hasLoginCredentials={true}
+    userLogin={"john@doe.com"}
+    passwordLogin={"testuser123"}
+    projectShortDescription={<Text tid="mmaSubheading" />}
+    aboutProjectText={
+      <div>
+        <Text tid="aboutMma1" />
+        <br /> <br />
+        <Text tid="aboutMma2" />
+        <br /> <br />
+        <Text tid="aboutMma3" />{" "}
+        <a
+          className="text-blue-400 underline"
+          href="https://travelist-client-clfox97sa.vercel.app/"
+          rel="noopener noreferrer"
+        >
+          App-Version
+        </a>{" "}
+        <Text tid="aboutMma4" />
+      </div>
     }
-    liveVersionLink={"https://kochannek.com/portfolio/lamberttravel/"}
+    features={[
+      <Text tid="mmaFeature1" />,
+      <Text tid="mmaFeature2" />,
+      <Text tid="mmaFeature3" />,
+      <Text tid="mmaFeature4" />,
+      <Text tid="mmaFeature5" />,
+      <Text tid="mmaFeature6" />,
+      <Text tid="mmaFeature7" />,
+      <Text tid="mmaFeature8" />,
+      <Text tid="mmaFeature9" />,
+    ]}
+    techStack={[
+      {
+        name: "HTML5",
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
+      },
+      {
+        name: "CSS3",
+        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
+      },
+      {
+        name: "React 16",
+        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
+      },
+      {
+        name: "NodeJS",
+        logo: <FaNodeJs className="w-12 h-12" style={{ color: "#6cc24a" }} />,
+      },
+      {
+        name: "Jest",
+        logo: <SiJest className="w-12 h-12" style={{ color: "A0475A" }} />,
+      },
+      {
+        name: "Enzyme",
+        logo: <SiAirbnb className="w-12 h-12" style={{ color: "#FF585D" }} />,
+      },
+      {
+        name: "PostgreSQL",
+        logo: <SiPostgresql className="w-12 h-12" style={{ color: "#008bb9" }} />
+      }
+    ]}
+  />,
+
+  <DefaultProject
+    name="Stocked"
+    imageFront={stocked}
+    imageBack={stockedgithub}
+    githubLink={"https://github.com/jclk86/Stocked-Client"}
+    githubLink2={"https://github.com/jclk86/Stocked-server"}
+    liveVersionLink={
+      "https://stocked-client-end.vercel.app"
+    }
+    hasLoginCredentials={false}
+    projectShortDescription={<Text tid="krsSubheading" />}
+    aboutProjectText={
+      <div>
+        <Text tid="aboutKrs1" />
+        <br /> <br />
+        <Text tid="aboutKrs2" />
+      </div>
+    }
+    features={[
+      <Text tid="krsFeature1" />,
+      <Text tid="krsFeature2" />,
+      <Text tid="krsFeature3" />,
+      <Text tid="krsFeature4" />,
+      <Text tid="krsFeature5" />,
+      <Text tid="krsFeature6" />,
+      <Text tid="krsFeature7" />,
+      <Text tid="krsFeature8" />,
+      <Text tid="krsFeature9" />,
+    ]}
+    techStack={[
+      {
+        name: "HTML5",
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
+      },
+      {
+        name: "CSS3",
+        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
+      },
+      {
+        name: "React 16",
+        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
+      },
+      {
+        name: "NodeJS",
+        logo: <FaNodeJs className="w-12 h-12" style={{ color: "#6cc24a" }} />,
+      },
+      {
+        name: "Jest",
+        logo: <SiJest className="w-12 h-12" style={{ color: "A0475A" }} />,
+      },
+      {
+        name: "Enzyme",
+        logo: <SiAirbnb className="w-12 h-12" style={{ color: "#FF585D" }} />,
+      },
+      {
+        name: "PostgreSQL",
+        logo: <SiPostgresql className="w-12 h-12" style={{ color: "#008bb9" }} />
+      }
+    ]}
+  />,
+  <DefaultProject
+    name={"Livable"}
+    imageFront={livable}
+    imageBack={livablegithub}
+    githubLink={
+      "https://github.com/jclk86/Livable"
+    }
+    liveVersionLink={"https://jclk86.github.io/Livable/"}
     hasLoginCredentials={false}
     projectShortDescription={<Text tid="ltSubheading" />}
     aboutProjectText={
@@ -177,36 +288,35 @@ const projectList = [
     ]}
     techStack={[
       {
-        name: "React 16",
-        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
-        subtexts: ["React Router", "Context API"],
+        name: "HTML5",
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
       },
       {
-        name: "CSS 3",
+        name: "CSS3",
         logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
-        subtexts: ["Custom CSS"],
       },
       {
-        name: "Contentful",
-        logo: (
-          <img
-            className="w-12 h-12"
-            src="https://avatars1.githubusercontent.com/u/472182?s=280&v=4"
-            alt="contentful"
-          />
-        ),
-        subtexts: ["Database API"],
+        name: "jQuery",
+        logo: <SiJquery className="w-12 h-12" style={{ color: " #0769AD" }} />,
+      },
+      {
+        name: "JavaScript",
+        logo: <DiJavascript className="w-12 h-12" style={{ color: "#F0DB4F" }} />,
+      },
+      {
+        name: "Google Maps API",
+        logo: <SiGooglemaps className="w-12 h-12" style={{ color: "#DD4B3E" }} />,
       },
     ]}
   />,
   <DefaultProject
-    name={"Giphyclone"}
-    imageFront={gcBack}
-    imageBack={gcFront}
+    name={"Quiz App"}
+    imageFront={quizapp}
+    imageBack={quizgithub}
     githubLink={
-      "https://github.com/th1rst/learning/tree/master/Projects/giphyclone"
+      "https://github.com/jclk86/quiz-app"
     }
-    liveVersionLink={"https://kochannek.com/portfolio/giphyclone/"}
+    liveVersionLink={"https://jclk86.github.io/quiz-app/"}
     hasLoginCredentials={false}
     projectShortDescription={<Text tid="gcSubheading" />}
     aboutProjectText={
@@ -226,133 +336,23 @@ const projectList = [
     ]}
     techStack={[
       {
-        name: "React 16",
-        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
-        subtexts: ["React Router", "Context API"],
+        name: "HTML5",
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
       },
       {
-        name: "CSS 3",
+        name: "CSS3",
         logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
       },
-    ]}
-  />,
-  <DefaultProject
-    name={"Start Page"}
-    imageFront={spFront}
-    imageBack={spBack}
-    githubLink={
-      "https://github.com/th1rst/learning/tree/master/Projects/StartPage"
-    }
-    liveVersionLink={"https://kochannek.com/portfolio/startpage/"}
-    hasLoginCredentials={false}
-    projectShortDescription={<Text tid="spSubheading" />}
-    aboutProjectText={
-      <div>
-        <Text tid="aboutSp1" />
-        <br />
-        <br />
-        <div className="text-center">
-          <Text tid="aboutSp2" />
-          <br />
-          <br />
-          <ul>
-            <li>
-              - <Text tid="spListItem1" />
-            </li>
-            <li>
-              - <Text tid="spListItem2" />
-            </li>
-            <li>
-              - <Text tid="spListItem3" />
-            </li>
-            <li>
-              - <Text tid="spListItem4" />
-            </li>
-            <li>
-              - <Text tid="spListItem5" />
-            </li>
-            <li>
-              - <Text tid="spListItem6" />
-            </li>
-          </ul>
-        </div>
-        <br />
-        <br />
-        <Text tid="aboutSp3" />
-        <br />
-        <Text tid="aboutSp4" />
-        <br />
-        <br />
-        <Text tid="aboutSp5" />
-        <br />
-        <br />
-        <Text tid="aboutSp6" />
-      </div>
-    }
-    features={[
-      <Text tid="spFeature1" />,
-      <Text tid="spFeature2" />,
-      <Text tid="spFeature3" />,
-      <Text tid="spFeature4" />,
-      <Text tid="spFeature5" />,
-      <Text tid="spFeature6" />,
-    ]}
-    techStack={[
       {
-        name: "HTML 5",
-        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
+        name: "jQuery",
+        logo: <SiJquery className="w-12 h-12" style={{ color: " #0769AD" }} />,
       },
       {
         name: "JavaScript",
-        logo: (
-          <DiJavascript className="w-12 h-12" style={{ color: "#ddb440" }} />
-        ),
-      },
-      {
-        name: "CSS 3",
-        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
-        subtexts: ["Custom CSS"],
+        logo: <DiJavascript className="w-12 h-12" style={{ color: "#F0DB4F" }} />,
       },
     ]}
-  />,
-  <DefaultProject
-    name={<Text tid="jppHeading" />}
-    imageFront={ppBack}
-    imageBack={ppFront}
-    githubLink={
-      "https://github.com/th1rst/learning/tree/master/Projects/SampleRestaurant"
-    }
-    liveVersionLink={"https://kochannek.com/portfolio/restaurant/"}
-    hasLoginCredentials={false}
-    projectShortDescription={<Text tid="jppSubheading" />}
-    aboutProjectText={
-      <div>
-        <Text tid="aboutJpp1" />
-        <br />
-        <br />
-        <Text tid="aboutJpp2" />
-        <br />
-        <br />
-        <Text tid="aboutJpp3" />
-      </div>
-    }
-    features={[
-      <Text tid="jppFeature1" />,
-      <Text tid="jppFeature2" />,
-      <Text tid="jppFeature3" />,
-    ]}
-    techStack={[
-      {
-        name: "HTML 5",
-        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
-      },
-      {
-        name: "CSS 3",
-        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
-        subtexts: ["Custom CSS"],
-      },
-    ]}
-  />,
+  />
 ];
 
 export default projectList;

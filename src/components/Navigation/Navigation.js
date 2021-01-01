@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Transition } from "@tailwindui/react";
 import { Text } from "../Multilanguage/Text";
-import { LanguageSelector } from "../Multilanguage/LanguageSelector";
 import { ThemeSelector } from "../DarkMode/ThemeSelector";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdSettings } from "react-icons/md";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { useSpring, useTrail, animated } from "react-spring";
+import { useSpring, animated } from "react-spring";
 import { AnimatedLogoDark } from "./AnimatedLogoDark";
 import { AnimatedLogoLight } from "./AnimatedLogoLight";
 import { ThemeContext } from "../DarkMode/ThemeProvider";
+import { v4 as uuidv4 } from 'uuid';
+
 
 export default function Navigation() {
   const [hidden, setHidden] = useState(true);
@@ -20,11 +21,6 @@ export default function Navigation() {
   const [hoveredContact, setHoveredContact] = useState(false);
   const { theme } = React.useContext(ThemeContext);
 
-  const { opacity } = useSpring({
-    config: { duration: 600 },
-    opacity: hidden ? 0 : 1,
-  });
-
   const { xyz } = useSpring({
     xyz: settingsVisible ? [0, 0, 0] : [120, 0, 0],
   });
@@ -33,7 +29,6 @@ export default function Navigation() {
   const mobileNavItems = [
     <div className="mt-4 w-screen px-8 mx-auto h-12 flex flex-row justify-between items-center">
       <ThemeSelector />
-      <LanguageSelector />
     </div>,
 
     <Link
@@ -66,7 +61,6 @@ export default function Navigation() {
       </span>
     </Link>,
   ];
-  const trail = useTrail(mobileNavItems.length, { opacity: hidden ? 0 : 1 });
 
   return (
     <div className="border-b border-gray-800 shadow-xl">
@@ -219,32 +213,29 @@ export default function Navigation() {
                 }}
               >
                 <ThemeSelector />
-                <LanguageSelector />
               </animated.div>
-            ) : null}
+              ) : null}
           </div>
         </div>
 
         {/* MOBILE VERSION */}
         {!hidden ? (
-          <animated.div
-            style={{ opacity }}
-            className="w-full flex justify-center"
+          <div
+            className="w-full flex justify-center lg:hidden"
           >
             <ul>
-              {trail.map(({ opacity }, i) => {
-                const item = mobileNavItems[i];
+              {mobileNavItems.map((item) => {
                 return (
-                  <animated.li style={{ opacity }} key={Math.random() * 1000}>
+                  <li key={uuidv4()}>
                     <div className="w-full text-center font-semibold uppercase flex flex-col">
                       {item}
                     </div>
-                  </animated.li>
+                  </li>
                 );
               })}
             </ul>
-          </animated.div>
-        ) : null}
+          </div>
+            ) : null}
       </nav>
     </div>
   );
