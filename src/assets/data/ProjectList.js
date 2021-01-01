@@ -37,24 +37,22 @@ const projectList = [
       "https://www.onboardlist.com/"
     }
     hasLoginCredentials={false}
-    projectShortDescription={<Text tid="krsSubheading" />}
+    projectShortDescription={<Text tid="oblSubheading" />}
     aboutProjectText={
       <div>
-        <Text tid="aboutKrs1" />
+        <Text tid="aboutObl1" />
         <br /> <br />
-        <Text tid="aboutKrs2" />
+        <Text tid="aboutObl2" />
+        <br /> <br />
+        <Text tid="aboutObl3" />
       </div>
     }
     features={[
-      <Text tid="krsFeature1" />,
-      <Text tid="krsFeature2" />,
-      <Text tid="krsFeature3" />,
-      <Text tid="krsFeature4" />,
-      <Text tid="krsFeature5" />,
-      <Text tid="krsFeature6" />,
-      <Text tid="krsFeature7" />,
-      <Text tid="krsFeature8" />,
-      <Text tid="krsFeature9" />,
+      <Text tid="oblFeature1" />,
+      <Text tid="oblFeature2" />,
+      <Text tid="oblFeature3" />,
+      <Text tid="oblFeature4" />,
+      <Text tid="oblFeature5" />,
     ]}
     techStack={[
       {
