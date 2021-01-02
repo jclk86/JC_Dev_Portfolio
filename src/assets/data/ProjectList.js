@@ -134,8 +134,8 @@ const projectList = [
     githubLink2={"https://github.com/jclk86/travelist-server"}
     liveVersionLink={"https://travelist-client-clfox97sa.vercel.app/"}
     hasLoginCredentials={true}
-    userLogin={"john@doe.com"}
-    passwordLogin={"testuser123"}
+    userLogin={"CNorris"}
+    passwordLogin={"Password123!"}
     projectShortDescription={<Text tid="mmaSubheading" />}
     aboutProjectText={
       <div>
@@ -201,12 +201,14 @@ const projectList = [
     name="Stocked"
     imageFront={stocked}
     imageBack={stockedgithub}
+    hasLoginCredentials={true}
+    userLogin={"CNorris"}
+    passwordLogin={"Password123!"}
     githubLink={"https://github.com/jclk86/Stocked-Client"}
     githubLink2={"https://github.com/jclk86/Stocked-server"}
     liveVersionLink={
       "https://stocked-client-end.vercel.app"
     }
-    hasLoginCredentials={false}
     projectShortDescription={<Text tid="krsSubheading" />}
     aboutProjectText={
       <div>
