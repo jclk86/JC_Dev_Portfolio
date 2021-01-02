@@ -45,6 +45,10 @@ const projectList = [
         <Text tid="aboutObl2" />
         <br /> <br />
         <Text tid="aboutObl3" />
+        <br /> <br />
+        <Text tid="aboutObl4" />
+        <br /> <br />
+        <Text tid="aboutObl5" />
       </div>
     }
     features={[
@@ -53,6 +57,7 @@ const projectList = [
       <Text tid="oblFeature3" />,
       <Text tid="oblFeature4" />,
       <Text tid="oblFeature5" />,
+      <Text tid="oblFeature6" />,
     ]}
     techStack={[
       {
@@ -87,24 +92,38 @@ const projectList = [
     imageFront={growoplogin}
     imageBack={growopplant}
     hasLoginCredentials={false}
-    projectShortDescription={<Text tid="krsSubheading" />}
+    projectShortDescription={<Text tid="growopSubheading" />}
     aboutProjectText={
       <div>
-        <Text tid="aboutKrs1" />
+        <Text tid="aboutGrowOp1" />
         <br /> <br />
-        <Text tid="aboutKrs2" />
+        <Text tid="aboutGrowOp2" />
+        <br /> <br />
+        <Text tid="aboutGrowOp3" />
+        <br /> <br />
+        <Text tid="aboutGrowOp4" />
+        <br /> <br />
+        <Text tid="aboutGrowOp5" />
+        <br /> <br />
+        <Text tid="aboutGrowOp6" />
+        <br /> <br />
+        <Text tid="aboutGrowOp7" />
+        <br /> <br />
+        <Text tid="aboutGrowOp8" />
+        <br /> <br />
+        <Text tid="aboutGrowOp9" />
+        <br /> <br />
+        <Text tid="aboutGrowOp10" />
+        <br /> <br />
+        <Text tid="aboutGrowOp11" />
       </div>
     }
     features={[
-      <Text tid="krsFeature1" />,
-      <Text tid="krsFeature2" />,
-      <Text tid="krsFeature3" />,
-      <Text tid="krsFeature4" />,
-      <Text tid="krsFeature5" />,
-      <Text tid="krsFeature6" />,
-      <Text tid="krsFeature7" />,
-      <Text tid="krsFeature8" />,
-      <Text tid="krsFeature9" />,
+      <Text tid="growopFeature1" />,
+      <Text tid="growopFeature2" />,
+      <Text tid="growopFeature3" />,
+      <Text tid="growopFeature4" />,
+      <Text tid="growopFeature5" />,
     ]}
     techStack={[
       {
@@ -136,34 +155,29 @@ const projectList = [
     hasLoginCredentials={true}
     userLogin={"CNorris"}
     passwordLogin={"Password123!"}
-    projectShortDescription={<Text tid="mmaSubheading" />}
+    projectShortDescription={<Text tid="travSubheading" />}
     aboutProjectText={
       <div>
-        <Text tid="aboutMma1" />
+        <Text tid="aboutTrav1" />
         <br /> <br />
-        <Text tid="aboutMma2" />
+        <Text tid="aboutTrav2" />
         <br /> <br />
-        <Text tid="aboutMma3" />{" "}
-        <a
-          className="text-blue-400 underline"
-          href="https://travelist-client-clfox97sa.vercel.app/"
-          rel="noopener noreferrer"
-        >
-          App-Version
-        </a>{" "}
-        <Text tid="aboutMma4" />
+        <Text tid="aboutTrav3" />
+        <br /> <br />
+        <Text tid="aboutTrav4" />
+        <br /> <br />
+        <Text tid="aboutTrav5" />
       </div>
     }
     features={[
-      <Text tid="mmaFeature1" />,
-      <Text tid="mmaFeature2" />,
-      <Text tid="mmaFeature3" />,
-      <Text tid="mmaFeature4" />,
-      <Text tid="mmaFeature5" />,
-      <Text tid="mmaFeature6" />,
-      <Text tid="mmaFeature7" />,
-      <Text tid="mmaFeature8" />,
-      <Text tid="mmaFeature9" />,
+      <Text tid="TravFeature1" />,
+      <Text tid="TravFeature2" />,
+      <Text tid="TravFeature3" />,
+      <Text tid="TravFeature4" />,
+      <Text tid="TravFeature5" />,
+      <Text tid="TravFeature6" />,
+      <Text tid="TravFeature7" />,
+      <Text tid="TravFeature8" />,
     ]}
     techStack={[
       {
@@ -209,24 +223,23 @@ const projectList = [
     liveVersionLink={
       "https://stocked-client-end.vercel.app"
     }
-    projectShortDescription={<Text tid="krsSubheading" />}
+    projectShortDescription={<Text tid="stockSubheading" />}
     aboutProjectText={
       <div>
-        <Text tid="aboutKrs1" />
+        <Text tid="aboutStock1" />
         <br /> <br />
-        <Text tid="aboutKrs2" />
+        <Text tid="aboutStock2" />
+        <br /> <br />
+        <Text tid="aboutStock3" />
+        <br /> <br />
+        <Text tid="aboutStock4" />
       </div>
     }
     features={[
-      <Text tid="krsFeature1" />,
-      <Text tid="krsFeature2" />,
-      <Text tid="krsFeature3" />,
-      <Text tid="krsFeature4" />,
-      <Text tid="krsFeature5" />,
-      <Text tid="krsFeature6" />,
-      <Text tid="krsFeature7" />,
-      <Text tid="krsFeature8" />,
-      <Text tid="krsFeature9" />,
+      <Text tid="stockFeature1" />,
+      <Text tid="stockFeature2" />,
+      <Text tid="stockFeature3" />,
+      <Text tid="stockFeature4" />,
     ]}
     techStack={[
       {
@@ -268,23 +281,20 @@ const projectList = [
     }
     liveVersionLink={"https://jclk86.github.io/Livable/"}
     hasLoginCredentials={false}
-    projectShortDescription={<Text tid="ltSubheading" />}
+    projectShortDescription={<Text tid="livableSubheading" />}
     aboutProjectText={
       <div>
-        <Text tid="aboutLt1" />
+        <Text tid="aboutLivable1" />
         <br />
-        <Text tid="aboutLt2" />
+        <Text tid="aboutLivable2" />
         <br />
-        <Text tid="aboutLt3" />
-        <br />
-        <br />
-        <Text tid="aboutLt4" />
+        <Text tid="aboutLivable3" />
       </div>
     }
     features={[
-      <Text tid="ltFeature1" />,
-      <Text tid="ltFeature2" />,
-      <Text tid="ltFeature3" />,
+      <Text tid="livableFeature1" />,
+      <Text tid="livableFeature2" />,
+      <Text tid="livableFeature3" />,
     ]}
     techStack={[
       {
@@ -318,21 +328,17 @@ const projectList = [
     }
     liveVersionLink={"https://jclk86.github.io/quiz-app/"}
     hasLoginCredentials={false}
-    projectShortDescription={<Text tid="gcSubheading" />}
+    projectShortDescription={<Text tid="quizSubheading" />}
     aboutProjectText={
       <div>
-        <Text tid="aboutGc1" />
-        <br />
-        <Text tid="aboutGc2" />
-        <br />
-        <br />
-        <Text tid="aboutGc3" />
+        <Text tid="aboutQuiz1" />
       </div>
     }
     features={[
-      <Text tid="gcFeature1" />,
-      <Text tid="gcFeature2" />,
-      <Text tid="gcFeature3" />,
+      <Text tid="quizFeature1" />,
+      <Text tid="quizFeature2" />,
+      <Text tid="quizFeature3" />,
+      <Text tid="quizFeature4" />,
     ]}
     techStack={[
       {
