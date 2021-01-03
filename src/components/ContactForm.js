@@ -1,20 +1,14 @@
-import React from "react";
-import {
-  ReCaptcha,
-  Input,
-  Textarea,
-  Button,
-  CheckboxGroup,
-} from "react-rainbow-components";
-import { FaUser } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import SuccessModal from "./SuccessModal";
-import { Text } from "./Multilanguage/Text";
-import { ThemeContext } from "../components/DarkMode/ThemeProvider";
-import { Link } from "react-router-dom";
+import React from 'react';
+import {ReCaptcha, Input, Textarea, Button, CheckboxGroup} from 'react-rainbow-components';
+import {FaUser} from 'react-icons/fa';
+import {MdEmail} from 'react-icons/md';
+import SuccessModal from './SuccessModal';
+import {Text} from './Multilanguage/Text';
+import {ThemeContext} from '../components/DarkMode/ThemeProvider';
+import {Link} from 'react-router-dom';
 
 const formID = process.env.REACT_APP_FORM_ID;
-// TODO: https://help.formspree.io/hc/en-us/articles/360022811154
+
 //React-Rainbow-Component adjusted to personal needs
 class ContactForm extends React.Component {
   static contextType = ThemeContext;
@@ -46,28 +40,28 @@ class ContactForm extends React.Component {
   handleUserNameChange(event) {
     const userName = event.target.value;
     let error;
-    if (userName === undefined || userName === "") {
+    if (userName === undefined || userName === '') {
       error = <Text tid="nameRequired" />;
     }
-    this.setState({ userName: event.target.value, userNameError: error });
+    this.setState({userName: event.target.value, userNameError: error});
   }
 
   handleEmailChange(event) {
     const email = event.target.value;
     let error;
-    if (email === undefined || email === "") {
+    if (email === undefined || email === '') {
       error = <Text tid="emailRequired" />;
     }
-    this.setState({ email: event.target.value, emailError: error });
+    this.setState({email: event.target.value, emailError: error});
   }
 
   handleMessageChange(event) {
     const message = event.target.value;
     let error;
-    if (message === undefined || message === "") {
+    if (message === undefined || message === '') {
       error = <Text tid="messageRequired" />;
     }
-    this.setState({ message: event.target.value, messageError: error });
+    this.setState({message: event.target.value, messageError: error});
   }
 
   handleReCaptchaSuccess(token) {
@@ -75,7 +69,7 @@ class ContactForm extends React.Component {
     if (token === undefined) {
       error = <Text tid="captchaRequired" />;
     }
-    this.setState({ recaptcha: token, recaptchaError: error });
+    this.setState({recaptcha: token, recaptchaError: error});
   }
 
   handleSubmit(event) {
@@ -88,16 +82,16 @@ class ContactForm extends React.Component {
       recaptchaError: undefined,
     };
     let reload = false;
-    const { userName, email, message, recaptcha, checkboxError } = this.state;
-    if (userName === undefined || userName === "") {
+    const {userName, email, message, recaptcha, checkboxError} = this.state;
+    if (userName === undefined || userName === '') {
       error.userNameError = <Text tid="nameRequired" />;
       reload = true;
     }
-    if (email === undefined || email === "") {
+    if (email === undefined || email === '') {
       error.emailError = <Text tid="emailRequired" />;
       reload = true;
     }
-    if (message === undefined || message === "") {
+    if (message === undefined || message === '') {
       error.messageError = <Text tid="messageRequired" />;
       reload = true;
     }
@@ -107,9 +101,9 @@ class ContactForm extends React.Component {
     }
     if (checkboxError !== false) {
       reload = true;
-    } 
+    }
     if (reload) {
-      this.setState({ ...error });
+      this.setState({...error});
     } else {
       this.sendFormData();
       this.reCaptchaRef.current.reset();
@@ -118,21 +112,21 @@ class ContactForm extends React.Component {
 
   sendFormData() {
     fetch(`https://formspree.io/f/${formID}`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
       },
       body: JSON.stringify(this.state),
     })
       .then(function (response) {
         console.log(response);
       })
-      .then(() => this.setState({ showModal: true }))
+      .then(() => this.setState({showModal: true}))
       .then(() =>
         setTimeout(
           function () {
-            this.setState({ showModal: false });
+            this.setState({showModal: false});
           }.bind(this),
           5000
         )
@@ -143,7 +137,7 @@ class ContactForm extends React.Component {
   }
 
   handleOnChange(values) {
-    this.setState({ values, checkboxError: !this.state.checkboxError });
+    this.setState({values, checkboxError: !this.state.checkboxError});
   }
 
   render() {
@@ -161,7 +155,7 @@ class ContactForm extends React.Component {
     } = this.state;
 
     const RECAPTCHA_APIKEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
-    const { theme } = this.context;
+    const {theme} = this.context;
 
     return (
       <>
@@ -212,18 +206,15 @@ class ContactForm extends React.Component {
                     error={checkboxError ? <Text tid="fieldRequired" /> : null}
                     options={[
                       {
-                        value: "checkboxOne",
+                        value: 'checkboxOne',
                         label: (
                           <div
                             className={`${
-                              theme === "dark" ? "text-white" : "text-black"
+                              theme === 'dark' ? 'text-white' : 'text-black'
                             } inline-flex`}
                           >
                             <Text tid="acceptPrivacy" />
-                            <Link
-                              className="ml-1 underline"
-                              to="imprintprivacypolicy"
-                            >
+                            <Link className="ml-1 underline" to="imprintprivacypolicy">
                               <Text tid="privacyPolicy" />
                             </Link>
                           </div>

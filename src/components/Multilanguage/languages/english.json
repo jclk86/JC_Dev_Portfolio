@@ -81,7 +81,7 @@
   "nameRequired": "the name is required",
   "emailRequired": "the email is required",
   "messageRequired": "the message is required",
-  "captchaRequired": "the recaptcha needs to be completed",
+  "captchaRequired": "* the recaptcha needs to be completed",
   "fieldRequired": "this field is required",
   "send": "Send",
   "goToPage": "Go to page",
