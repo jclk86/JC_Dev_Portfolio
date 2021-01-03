@@ -4,5 +4,5 @@ module.exports = {
   "semi": false,
   "jsxBracketSameLine": true,
   "trailingComma": "es5",
-  "printWidth": 80
+  "printWidth": 20
 };
