@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-row justify-center items-center">
           <a target="_top" rel="noopener noreferrer" href="mailto:johnchancontact@gmail.com ">
-            Emai
+            Email
           </a>
         </div>
       </div>
