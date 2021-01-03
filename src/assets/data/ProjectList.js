@@ -47,8 +47,6 @@ const projectList = [
         <Text tid="aboutObl3" />
         <br /> <br />
         <Text tid="aboutObl4" />
-        <br /> <br />
-        <Text tid="aboutObl5" />
       </div>
     }
     features={[
@@ -102,20 +100,6 @@ const projectList = [
         <Text tid="aboutGrowOp3" />
         <br /> <br />
         <Text tid="aboutGrowOp4" />
-        <br /> <br />
-        <Text tid="aboutGrowOp5" />
-        <br /> <br />
-        <Text tid="aboutGrowOp6" />
-        <br /> <br />
-        <Text tid="aboutGrowOp7" />
-        <br /> <br />
-        <Text tid="aboutGrowOp8" />
-        <br /> <br />
-        <Text tid="aboutGrowOp9" />
-        <br /> <br />
-        <Text tid="aboutGrowOp10" />
-        <br /> <br />
-        <Text tid="aboutGrowOp11" />
       </div>
     }
     features={[
@@ -163,10 +147,6 @@ const projectList = [
         <Text tid="aboutTrav2" />
         <br /> <br />
         <Text tid="aboutTrav3" />
-        <br /> <br />
-        <Text tid="aboutTrav4" />
-        <br /> <br />
-        <Text tid="aboutTrav5" />
       </div>
     }
     features={[
@@ -231,8 +211,6 @@ const projectList = [
         <Text tid="aboutStock2" />
         <br /> <br />
         <Text tid="aboutStock3" />
-        <br /> <br />
-        <Text tid="aboutStock4" />
       </div>
     }
     features={[
