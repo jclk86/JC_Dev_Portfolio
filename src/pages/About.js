@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useSpring, useTrail, animated } from "react-spring";
-import { ThemeContext } from "../components/DarkMode/ThemeProvider";
-import { Text } from "../components/Multilanguage/Text";
-import { SkillList } from "../assets/data/SkillList";
-import { v4 as uuidv4 } from 'uuid';
+import React, {useState, useEffect} from 'react';
+import {useSpring, useTrail, animated} from 'react-spring';
+import {ThemeContext} from '../components/DarkMode/ThemeProvider';
+import {Text} from '../components/Multilanguage/Text';
+import {SkillList} from '../assets/data/SkillList';
+import {v4 as uuidv4} from 'uuid';
 
 //SVGs + PNGs
-import { BookSVG } from "../assets/svg/components/BookSVG.js";
-import { CodeSVG } from "../assets/svg/components/CodeSVG.js";
-import { FilmSVG } from "../assets/svg/components/FilmSVG";
-import { ProfilePicture } from "../assets/pictures/ProfilePicture";
+import {BookSVG} from '../assets/svg/components/BookSVG.js';
+import {CodeSVG} from '../assets/svg/components/CodeSVG.js';
+import {FilmSVG} from '../assets/svg/components/FilmSVG';
+import {ProfilePicture} from '../assets/pictures/ProfilePicture';
 
 export default function About() {
-  const { theme } = React.useContext(ThemeContext);
-  const [visibleText, setvisibleText] = useState("coding");
+  const {theme} = React.useContext(ThemeContext);
+  const [visibleText, setvisibleText] = useState('coding');
   const [hidden, setHidden] = useState(true);
-  const { opacity } = useSpring({
-    config: { duration: 1000 },
+  const {opacity} = useSpring({
+    config: {duration: 1000},
     opacity: hidden ? 0 : 1,
   });
 
@@ -59,7 +58,7 @@ export default function About() {
           <div className="flex flex-col md:flex-row flex-wrap w-full justify-around items-center font-bold tracking-wide text-2xl uppercase">
             <div
               className="h-40 w-40 m-4 flex flex-col justify-center items-center cursor-pointer"
-              onMouseEnter={() => setvisibleText("coding")}
+              onMouseEnter={() => setvisibleText('coding')}
             >
               <CodeSVG />
               <Text tid="codingHeading" />
@@ -68,49 +67,44 @@ export default function About() {
             <div className="md:hidden mb-8">
               {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
               <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
-                <Text tid="" />
+                <Text tid="codingText1" />
                 <br />
-                <Text tid="" />
+                <Text tid="codingText2" />
               </div>
             </div>
 
             <div
               className="h-40 w-40 m-4 flex flex-col justify-center items-center cursor-pointer"
-              onMouseEnter={() => setvisibleText("writing")}
+              onMouseEnter={() => setvisibleText('writing')}
             >
               <BookSVG />
               <Text tid="writingHeading" />
             </div>
+            <div className="md:hidden mb-8">
+              {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
+              <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
+                <Text tid="writingText1" />
+              </div>
+            </div>
             <div
               className="h-40 w-40 m-4 flex flex-col justify-center items-center cursor-pointer"
-              onMouseEnter={() => setvisibleText("films")}
+              onMouseEnter={() => setvisibleText('films')}
             >
               <FilmSVG />
               <Text tid="filmsHeading" />
             </div>
+
             <div className="md:hidden mb-8">
               {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
               <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
                 <Text tid="filmsText1" />
                 <br />
                 <Text tid="filmsText2" />
-                <Text tid="filmsText3" />
-                <br />
-                <Text tid="filmsText4" />
-                <br />
-                <Text tid="filmsText5" />
-                <br />
-                <br />
-                <div className="italic text-center">
-                  &quot;
-                  <Text tid="filmsText6" />
-                  &quot;
-                </div>
               </div>
             </div>
           </div>
           <div className="hidden md:flex flex-row w-full px-12 py-4 font-semibold tracking-tight leading-7 text-justify">
-            {visibleText === "coding" ? (
+            {visibleText === 'coding' ? (
               <>
                 <Text tid="codingText1" />
                 <br />
@@ -118,31 +112,17 @@ export default function About() {
               </>
             ) : null}
 
-            {visibleText === "writing" ? (
+            {visibleText === 'writing' ? (
               <div className="w-full h-full">
-                <Text tid="codingText1" />
-                <br />
-                <Text tid="codingText2" />
+                <Text tid="writingText1" />
               </div>
             ) : null}
 
-            {visibleText === "films" ? (
+            {visibleText === 'films' ? (
               <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
                 <Text tid="filmsText1" />
                 <br />
                 <Text tid="filmsText2" />
-                <Text tid="filmsText3" />
-                <br />
-                <Text tid="filmsText4" />
-                <br />
-                <Text tid="filmsText5" />
-                <br />
-                <br />
-                <div className="italic text-center">
-                  &quot;
-                  <Text tid="filmsText6" />
-                  &quot;
-                </div>
               </div>
             ) : null}
           </div>
@@ -157,7 +137,10 @@ export default function About() {
       </div>
       <div className="text-white font-bold uppercase mt-6 w-full border-2 border-gray-800 rounded-lg flex flex-row flex-wrap justify-around items-center mb-12 shadow-xl">
         {SkillList.map((skill) => (
-          <div key={uuidv4()} className="m-4 h-32 w-32 border-2 border-gray-800 bg-gray-900 rounded-full flex flex-col justify-center items-center">
+          <div
+            key={uuidv4()}
+            className="m-4 h-32 w-32 border-2 border-gray-800 bg-gray-900 rounded-full flex flex-col justify-center items-center"
+          >
             {skill.logo}
             <p className="tracking-wider text-sm uppercase">{skill.name}</p>
           </div>
@@ -166,23 +149,21 @@ export default function About() {
     </div>,
   ];
 
-  const trail = useTrail(trailItems.length, { opacity: hidden ? 0 : 1 });
+  const trail = useTrail(trailItems.length, {opacity: hidden ? 0 : 1});
 
   return (
     <div
-      className={`${
-        theme === "dark" ? "bg-black text-white" : "bg-white text-black"
-      }
+      className={`${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}
     w-full min-h-screen`}
     >
       <div className="w-full h-auto flex justify-center">
         <div className="p-12 w-full flex flex-col">
           {!hidden ? (
-            <animated.div style={{ opacity }}>
+            <animated.div style={{opacity}}>
               <ul>
-                {trail.map(({ opacity }, i) => {
+                {trail.map(({opacity}, i) => {
                   return (
-                    <animated.li style={{ opacity }} key={uuidv4()}>
+                    <animated.li style={{opacity}} key={uuidv4()}>
                       {trailItems[i]}
                     </animated.li>
                   );
