@@ -9,7 +9,7 @@ export default function ImprintPrivacyPolicy() {
   return (
     <div
       className={`${theme === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}
-    w-screen min-h-screen`}
+    w-full min-h-screen`}
     >
       <h1 className="text-3xl font-bold underline text-center">
         <Text tid="imprintPrivacyPolicy" />

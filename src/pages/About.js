@@ -39,9 +39,6 @@ export default function About() {
         </div>
         <div className="font-semibold tracking-tight leading-7 text-justify md:p-4 md:ml-10 inline-flex">
           <Text tid="whoIamText1" />
-          <br />
-          <Text tid="whoIamText2" />
-          <br />
         </div>
       </div>
     </div>,
@@ -68,6 +65,7 @@ export default function About() {
               {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
               <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
                 <Text tid="codingText1" />
+                <br />
                 <br />
                 <Text tid="codingText2" />
               </div>
@@ -99,6 +97,7 @@ export default function About() {
               <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
                 <Text tid="filmsText1" />
                 <br />
+                <br />
                 <Text tid="filmsText2" />
               </div>
             </div>
@@ -107,6 +106,7 @@ export default function About() {
             {visibleText === 'coding' ? (
               <>
                 <Text tid="codingText1" />
+                <br />
                 <br />
                 <Text tid="codingText2" />
               </>
@@ -121,6 +121,7 @@ export default function About() {
             {visibleText === 'films' ? (
               <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
                 <Text tid="filmsText1" />
+                <br />
                 <br />
                 <Text tid="filmsText2" />
               </div>
