@@ -114,6 +114,7 @@ class ContactForm extends React.Component {
     fetch(`https://formspree.io/f/${formID}`, {
       method: 'POST',
       headers: {
+        'access-control-allow-origin': 'https://www.google.com',
         'Content-Type': 'application/json',
         Accept: 'application/json',
       },
