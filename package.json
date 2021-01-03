@@ -38,11 +38,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged --debug"
     }
   },
   "lint-staged": {
-    "*": [
+    "*.{js,jsx,json,md}": [
       "prettier --write"
     ]
   },
