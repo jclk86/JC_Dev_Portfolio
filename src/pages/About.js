@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import { useSpring, useTrail, animated } from "react-spring";
 import { ThemeContext } from "../components/DarkMode/ThemeProvider";
 import { Text } from "../components/Multilanguage/Text";
-import { BookList } from "../assets/data/BookList";
 import { SkillList } from "../assets/data/SkillList";
-import SpringContainer from "../components/SpringContainer";
 import { v4 as uuidv4 } from 'uuid';
 
 //SVGs + PNGs
 import { BookSVG } from "../assets/svg/components/BookSVG.js";
 import { CodeSVG } from "../assets/svg/components/CodeSVG.js";
-import { DogSVG } from "../assets/svg/components/DogSVG";
+import { FilmSVG } from "../assets/svg/components/FilmSVG";
 import { ProfilePicture } from "../assets/pictures/ProfilePicture";
 
 export default function About() {
@@ -70,9 +68,9 @@ export default function About() {
             <div className="md:hidden mb-8">
               {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
               <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
-                <Text tid="codingText1" />
+                <Text tid="" />
                 <br />
-                <Text tid="codingText2" />
+                <Text tid="" />
               </div>
             </div>
 
@@ -83,67 +81,29 @@ export default function About() {
               <BookSVG />
               <Text tid="writingHeading" />
             </div>
-            <div className="md:hidden mb-8">
-              {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
-              {BookList.map((book) => (
-                <div key={uuidv4()}>
-                  <div className="w-auto h-auto">
-                    <p
-                      className={`${
-                        theme === "dark" ? "text-white" : "text-black"
-                      } text-base `}
-                    >
-                      {book.role}
-                    </p>
-                    <div className="w-full h-full px-4 flex flex row items-center justify-center">
-                      <img
-                        className="transition duration-200 ease-in-out"
-                        src={book.coverURL}
-                        alt={book.name}
-                      />
-                    </div>
-                  </div>
-                  <Link to={`/previewer/${book.shortName}`}>
-                    <div className="mt-2 mb-10 flex flex-row items-center justify-center mx-auto bg-blue-400 h-10 w-32 rounded-xl p-4 text-white">
-                      <div className="font-semibold text-base tracking-wide">
-                        <Text tid="readNow" />
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            </div>
             <div
               className="h-40 w-40 m-4 flex flex-col justify-center items-center cursor-pointer"
-              onMouseEnter={() => setvisibleText("dogs")}
+              onMouseEnter={() => setvisibleText("films")}
             >
-              <DogSVG />
-              <Text tid="dogsHeading" />
+              <FilmSVG />
+              <Text tid="filmsHeading" />
             </div>
             <div className="md:hidden mb-8">
               {/* MOBILE VERSION, HIDDEN >md BREAKPOINT*/}
               <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
-                <Text tid="dogsText1" />
+                <Text tid="filmsText1" />
                 <br />
-                <Text tid="dogsText2" />{" "}
-                <a
-                  className="underline"
-                  href="https://kochannek.com/teddy.jpg"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Teddy
-                </a>
-                <Text tid="dogsText3" />
+                <Text tid="filmsText2" />
+                <Text tid="filmsText3" />
                 <br />
-                <Text tid="dogsText4" />
+                <Text tid="filmsText4" />
                 <br />
-                <Text tid="dogsText5" />
+                <Text tid="filmsText5" />
                 <br />
                 <br />
                 <div className="italic text-center">
                   &quot;
-                  <Text tid="dogsText6" />
+                  <Text tid="filmsText6" />
                   &quot;
                 </div>
               </div>
@@ -160,33 +120,27 @@ export default function About() {
 
             {visibleText === "writing" ? (
               <div className="w-full h-full">
-                <SpringContainer />
+                <Text tid="codingText1" />
+                <br />
+                <Text tid="codingText2" />
               </div>
             ) : null}
 
-            {visibleText === "dogs" ? (
+            {visibleText === "films" ? (
               <div className="px-2 font-semibold font-normal text-base normal-case text-sm text-justify">
-                <Text tid="dogsText1" />
+                <Text tid="filmsText1" />
                 <br />
-                <Text tid="dogsText2" />{" "}
-                <a
-                  className="underline"
-                  href="https://kochannek.com/teddy.jpg"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Teddy
-                </a>
-                <Text tid="dogsText3" />
+                <Text tid="filmsText2" />
+                <Text tid="filmsText3" />
                 <br />
-                <Text tid="dogsText4" />
+                <Text tid="filmsText4" />
                 <br />
-                <Text tid="dogsText5" />
+                <Text tid="filmsText5" />
                 <br />
                 <br />
                 <div className="italic text-center">
                   &quot;
-                  <Text tid="dogsText6" />
+                  <Text tid="filmsText6" />
                   &quot;
                 </div>
               </div>

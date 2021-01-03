@@ -98,8 +98,6 @@ const projectList = [
         <Text tid="aboutGrowOp2" />
         <br /> <br />
         <Text tid="aboutGrowOp3" />
-        <br /> <br />
-        <Text tid="aboutGrowOp4" />
       </div>
     }
     features={[
@@ -150,14 +148,14 @@ const projectList = [
       </div>
     }
     features={[
-      <Text tid="TravFeature1" />,
-      <Text tid="TravFeature2" />,
-      <Text tid="TravFeature3" />,
-      <Text tid="TravFeature4" />,
-      <Text tid="TravFeature5" />,
-      <Text tid="TravFeature6" />,
-      <Text tid="TravFeature7" />,
-      <Text tid="TravFeature8" />,
+      <Text tid="travFeature1" />,
+      <Text tid="travFeature2" />,
+      <Text tid="travFeature3" />,
+      <Text tid="travFeature4" />,
+      <Text tid="travFeature5" />,
+      <Text tid="travFeature6" />,
+      <Text tid="travFeature7" />,
+      <Text tid="travFeature8" />,
     ]}
     techStack={[
       {
@@ -263,9 +261,9 @@ const projectList = [
     aboutProjectText={
       <div>
         <Text tid="aboutLivable1" />
-        <br />
+        <br /> <br />
         <Text tid="aboutLivable2" />
-        <br />
+        <br /> <br />
         <Text tid="aboutLivable3" />
       </div>
     }
@@ -316,7 +314,6 @@ const projectList = [
       <Text tid="quizFeature1" />,
       <Text tid="quizFeature2" />,
       <Text tid="quizFeature3" />,
-      <Text tid="quizFeature4" />,
     ]}
     techStack={[
       {
