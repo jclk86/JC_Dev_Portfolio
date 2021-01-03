@@ -34,13 +34,17 @@
     "build": "npm run watch:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
-    "precommit": "lint-staged"
+    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
+    "./src/*.{js,jsx,ts,tsx}": [
+      "npx prettier --write",
+      "eslint src/*.js --fix-dry-run"
     ]
   },
   "eslintConfig": {
@@ -60,9 +64,12 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb": "^18.2.1",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "postcss-cli": "^8.1.0",
+    "prettier": "^2.2.1",
     "tailwindcss": "^1.9.5"
   }
 }
