@@ -1,10 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {ThemeContext} from '../components/DarkMode/ThemeProvider';
-import {Text} from '../components/Multilanguage/Text';
+import { Link } from 'react-router-dom';
+import { ThemeContext } from '../components/DarkMode/ThemeProvider';
+import { Text } from '../components/Multilanguage/Text';
 
 export default function Footer() {
-  const {theme} = React.useContext(ThemeContext);
+  const { theme } = React.useContext(ThemeContext);
   return (
     <div
       className={`${
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-row justify-center items-center">
           <a target="_top" rel="noopener noreferrer" href="mailto:johnchancontact@gmail.com ">
-            Email
+            Emai
           </a>
         </div>
       </div>
