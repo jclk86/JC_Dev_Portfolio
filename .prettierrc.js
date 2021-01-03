@@ -1,8 +1,8 @@
 module.exports = {
-  bracketSpacing: true,
-  jsxBracketSameLine: true,
-  singleQuote: true,
-  trailingComma: 'all',
-  printWidth: 100
-  // Override any other rules you want
+  "singleQuote": true,
+  "tabWidth": 2,
+  "semi": false,
+  "jsxBracketSameLine": true,
+  "trailingComma": "es5",
+  "printWidth": 80
 };
