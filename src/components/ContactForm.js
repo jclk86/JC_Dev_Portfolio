@@ -195,6 +195,12 @@ class ContactForm extends React.Component {
                 onChange={this.handleMessageChange}
               />
               <div className="mx-16 mt-8 flex flex-col items-center">
+                <ReCaptcha
+                  siteKey={RECAPTCHA_APIKEY}
+                  ref={this.reCaptchaRef}
+                  error={recaptchaError}
+                  onChange={this.handleReCaptchaSuccess}
+                />
                 <div className="mt-4">
                   <CheckboxGroup
                     error={checkboxError ? <Text tid="fieldRequired" /> : null}
