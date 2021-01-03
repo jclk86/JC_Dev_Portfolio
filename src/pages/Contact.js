@@ -21,18 +21,7 @@ export default function Contact() {
   return (
     <div className={`${theme === 'dark' ? 'bg-black' : 'bg-white'} w-full h-screen`}>
       {hasGivenConsent ? (
-        <form action="https://formspree.io/f/mdoppjpq" method="POST">
-          <label>
-            Your email:
-            <input type="text" name="_replyto" />
-          </label>
-          <label>
-            Your message:
-            <textarea name="message"></textarea>
-          </label>
-
-          <button type="submit">Send</button>
-        </form>
+        <ContactForm />
       ) : (
         <div className="text-white text-xl self-center px-8 md:px-40">
           <p className="pt-12">
