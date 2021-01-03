@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import ContactForm from "../components/ContactForm";
-import { ThemeContext } from "../components/DarkMode/ThemeProvider";
-import { Text } from "../components/Multilanguage/Text";
-import Cookies from "js-cookie";
-import CookieConsent from "react-cookie-consent";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import ContactForm from '../components/ContactForm';
+import { ThemeContext } from '../components/DarkMode/ThemeProvider';
+import { Text } from '../components/Multilanguage/Text';
+import Cookies from 'js-cookie';
+import CookieConsent from 'react-cookie-consent';
 
 export default function Contact() {
   const { theme } = React.useContext(ThemeContext);
   const [hasGivenConsent, setHasGivenConsent] = useState(false);
   const [showConsentAgain, setShowConsentAgain] = useState(false);
-  const cookie = Cookies.get("consentcookie");
+  const cookie = Cookies.get('consentcookie');
 
   const checkForConsent = () => (cookie ? setHasGivenConsent(true) : null);
 
@@ -19,20 +19,27 @@ export default function Contact() {
   });
 
   return (
-    <div
-      className={`${
-        theme === "dark" ? "bg-black" : "bg-white"
-      } w-full h-screen`}
-    >
+    <div className={`${theme === 'dark' ? 'bg-black' : 'bg-white'} w-full h-screen`}>
       {hasGivenConsent ? (
-        <ContactForm />
+        <form action="https://formspree.io/f/mdoppjpq" method="POST">
+          <label>
+            Your email:
+            <input type="text" name="_replyto" />
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+
+          <button type="submit">Send</button>
+        </form>
       ) : (
         <div className="text-white text-xl self-center px-8 md:px-40">
           <p className="pt-12">
             <Text tid="contactFormCookieText1" />
           </p>
           <p className="pt-12">
-            <Text tid="contactFormCookieText2" />{" "}
+            <Text tid="contactFormCookieText2" />{' '}
             <a
               className="cursor-pointer underline text-blue-400"
               href="mailto:chanjohndeveloper@gmail.com"
@@ -41,7 +48,7 @@ export default function Contact() {
             </a>
           </p>
           <p className="pt-12 text-center">
-            <Text tid="contactFormCookieText3" />{" "}
+            <Text tid="contactFormCookieText3" />{' '}
             <span
               className="cursor-pointer underline text-blue-400"
               onClick={() => setShowConsentAgain(true)}
@@ -57,11 +64,11 @@ export default function Contact() {
           buttonText={<Text tid="cookieAccept" />}
           cookieName="consentcookie"
           onAccept={() => setHasGivenConsent(true)}
-          style={{ background: "#070707", borderTop: "2px solid gray" }}
-          buttonStyle={{ fontSize: "16px" }}
+          style={{ background: '#070707', borderTop: '2px solid gray' }}
+          buttonStyle={{ fontSize: '16px' }}
           expires={150}
         >
-          <Text tid="cookieText1" />{" "}
+          <Text tid="cookieText1" />{' '}
           <Link className="ml-2 text-sm underline" to="/ImprintPrivacyPolicy">
             <Text tid="cookieText2" />
           </Link>
