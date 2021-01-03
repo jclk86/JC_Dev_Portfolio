@@ -1,11 +1,11 @@
 import React from 'react';
-import {ReCaptcha, Input, Textarea, Button, CheckboxGroup} from 'react-rainbow-components';
-import {FaUser} from 'react-icons/fa';
-import {MdEmail} from 'react-icons/md';
+import { ReCaptcha, Input, Textarea, Button, CheckboxGroup } from 'react-rainbow-components';
+import { FaUser } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import SuccessModal from './SuccessModal';
-import {Text} from './Multilanguage/Text';
-import {ThemeContext} from '../components/DarkMode/ThemeProvider';
-import {Link} from 'react-router-dom';
+import { Text } from './Multilanguage/Text';
+import { ThemeContext } from '../components/DarkMode/ThemeProvider';
+import { Link } from 'react-router-dom';
 
 const formID = process.env.REACT_APP_FORM_ID;
 
@@ -43,7 +43,7 @@ class ContactForm extends React.Component {
     if (userName === undefined || userName === '') {
       error = <Text tid="nameRequired" />;
     }
-    this.setState({userName: event.target.value, userNameError: error});
+    this.setState({ userName: event.target.value, userNameError: error });
   }
 
   handleEmailChange(event) {
@@ -52,7 +52,7 @@ class ContactForm extends React.Component {
     if (email === undefined || email === '') {
       error = <Text tid="emailRequired" />;
     }
-    this.setState({email: event.target.value, emailError: error});
+    this.setState({ email: event.target.value, emailError: error });
   }
 
   handleMessageChange(event) {
@@ -61,7 +61,7 @@ class ContactForm extends React.Component {
     if (message === undefined || message === '') {
       error = <Text tid="messageRequired" />;
     }
-    this.setState({message: event.target.value, messageError: error});
+    this.setState({ message: event.target.value, messageError: error });
   }
 
   handleReCaptchaSuccess(token) {
@@ -69,7 +69,7 @@ class ContactForm extends React.Component {
     if (token === undefined) {
       error = <Text tid="captchaRequired" />;
     }
-    this.setState({recaptcha: token, recaptchaError: error});
+    this.setState({ recaptcha: token, recaptchaError: error });
   }
 
   handleSubmit(event) {
@@ -82,7 +82,7 @@ class ContactForm extends React.Component {
       recaptchaError: undefined,
     };
     let reload = false;
-    const {userName, email, message, recaptcha, checkboxError} = this.state;
+    const { userName, email, message, recaptcha, checkboxError } = this.state;
     if (userName === undefined || userName === '') {
       error.userNameError = <Text tid="nameRequired" />;
       reload = true;
@@ -103,7 +103,7 @@ class ContactForm extends React.Component {
       reload = true;
     }
     if (reload) {
-      this.setState({...error});
+      this.setState({ ...error });
     } else {
       this.sendFormData();
       this.reCaptchaRef.current.reset();
@@ -114,7 +114,6 @@ class ContactForm extends React.Component {
     fetch(`https://formspree.io/f/${formID}`, {
       method: 'POST',
       headers: {
-        'access-control-allow-origin': 'https://www.google.com',
         'Content-Type': 'application/json',
         Accept: 'application/json',
       },
@@ -123,11 +122,11 @@ class ContactForm extends React.Component {
       .then(function (response) {
         console.log(response);
       })
-      .then(() => this.setState({showModal: true}))
+      .then(() => this.setState({ showModal: true }))
       .then(() =>
         setTimeout(
           function () {
-            this.setState({showModal: false});
+            this.setState({ showModal: false });
           }.bind(this),
           5000
         )
@@ -138,7 +137,7 @@ class ContactForm extends React.Component {
   }
 
   handleOnChange(values) {
-    this.setState({values, checkboxError: !this.state.checkboxError});
+    this.setState({ values, checkboxError: !this.state.checkboxError });
   }
 
   render() {
@@ -156,7 +155,7 @@ class ContactForm extends React.Component {
     } = this.state;
 
     const RECAPTCHA_APIKEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
-    const {theme} = this.context;
+    const { theme } = this.context;
 
     return (
       <>
