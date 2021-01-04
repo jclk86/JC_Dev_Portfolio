@@ -157,6 +157,7 @@ class ContactForm extends React.Component {
     const RECAPTCHA_APIKEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
     const { theme } = this.context;
 
+    const recap = false;
     return (
       <>
         {showModal ? <SuccessModal /> : null}
@@ -195,12 +196,14 @@ class ContactForm extends React.Component {
                 onChange={this.handleMessageChange}
               />
               <div className="mx-16 mt-8 flex flex-col items-center">
-                <ReCaptcha
-                  siteKey={RECAPTCHA_APIKEY}
-                  ref={this.reCaptchaRef}
-                  error={recaptchaError}
-                  onChange={this.handleReCaptchaSuccess}
-                />
+                {recap ? (
+                  <ReCaptcha
+                    siteKey={RECAPTCHA_APIKEY}
+                    ref={this.reCaptchaRef}
+                    error={recaptchaError}
+                    onChange={this.handleReCaptchaSuccess}
+                  />
+                ) : null}
                 <div className="mt-4">
                   <CheckboxGroup
                     error={checkboxError ? <Text tid="fieldRequired" /> : null}
