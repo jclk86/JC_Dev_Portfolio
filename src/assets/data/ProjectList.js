@@ -1,41 +1,105 @@
-import React from "react";
-import DefaultProject from "../../components/Projects/DefaultProject";
-import { Text } from "../../components/Multilanguage/Text";
+import React from 'react';
+import DefaultProject from '../../components/Projects/DefaultProject';
+import { Text } from '../../components/Multilanguage/Text';
 
 //Icons
-import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from "react-icons/fa";
-import { SiPostgresql, SiJest, SiAirbnb, SiJquery, SiGooglemaps, SiTypescript, SiAndroid } from "react-icons/si";
-import { DiJavascript } from "react-icons/di";
-import Sanity from "../pictures/Sanity.jpg";
-import NextJS from "../pictures/NextJS.png";
-import Chakra from "../pictures/Chakra.jpg";
-import ReactNative from "../pictures/ReactNative.png";
-import Redux from "../pictures/Redux.png";
-import d3js from "../pictures/d3JS.jpg";
+import { FaReact, FaCss3Alt, FaHtml5, FaNodeJs } from 'react-icons/fa';
+import {
+  SiPostgresql,
+  SiJest,
+  SiAirbnb,
+  SiJquery,
+  SiGooglemaps,
+  SiTypescript,
+  SiAndroid,
+  SiMaterialUi,
+} from 'react-icons/si';
+import { DiJavascript } from 'react-icons/di';
+import Sanity from '../pictures/Sanity.jpg';
+import NextJS from '../pictures/NextJS.png';
+import Chakra from '../pictures/Chakra.jpg';
+import ReactNative from '../pictures/ReactNative.png';
+import Redux from '../pictures/Redux.png';
+import d3js from '../pictures/d3JS.jpg';
 
 //Pictures
-import travelist from "../pictures/Travelist/Travelist.png";
-import travelistgithub from "../pictures/Travelist/TravelistGithub.png";
-import stocked from "../pictures/Stocked/Stocked.png";
-import stockedgithub from "../pictures/Stocked/StockedGithub.png";
-import quizapp from "../pictures/QuizApp/QuizApp.jpg"
-import quizgithub from "../pictures/QuizApp/QuizGithub.png";
-import livable from "../pictures/Livable/Livable.jpg";
-import livablegithub from "../pictures/Livable/LivableGithub.png";
-import onboardlist from "../pictures/OnboardList/OnboardList.png"
-import onboardlistblog from "../pictures/OnboardList/OnboardListBlog.png"
-import growoplogin from "../pictures/GrowOp/GrowOPLogin.png";
-import growopplant from "../pictures/GrowOp/GrowOpPlant.png";
-
+import travelist from '../pictures/Travelist/Travelist.png';
+import travelistgithub from '../pictures/Travelist/TravelistGithub.png';
+import stocked from '../pictures/Stocked/Stocked.png';
+import stockedgithub from '../pictures/Stocked/StockedGithub.png';
+import quizapp from '../pictures/QuizApp/QuizApp.jpg';
+import quizgithub from '../pictures/QuizApp/QuizGithub.png';
+import livable from '../pictures/Livable/Livable.jpg';
+import livablegithub from '../pictures/Livable/LivableGithub.png';
+import onboardlist from '../pictures/OnboardList/OnboardList.png';
+import onboardlistblog from '../pictures/OnboardList/OnboardListBlog.png';
+import growoplogin from '../pictures/GrowOp/GrowOPLogin.png';
+import growopplant from '../pictures/GrowOp/GrowOpPlant.png';
+import ScrumBoard from '../pictures/ProjectManagementApp/scrumBoard.png';
+import Diagram from '../pictures/ProjectManagementApp/diagram.png';
 
 const projectList = [
+  <DefaultProject
+    name="Project Management App"
+    imageFront={ScrumBoard}
+    imageBack={Diagram}
+    githubLink={'https://github.com/jclk86/bug-tracker-server'}
+    hasLoginCredentials={true}
+    projectShortDescription={<Text tid="bugTrackerSubheading" />}
+    aboutProjectText={
+      <div>
+        <Text tid="aboutBugTracker1" />
+        <br /> <br />
+        <Text tid="aboutBugTracker2" />
+        <br /> <br />
+        <Text tid="aboutBugTracker3" />
+        <br /> <br />
+        <Text tid="aboutBugTracker4" />
+        <br /> <br />
+        <Text tid="aboutBugTracker5" />
+      </div>
+    }
+    features={[
+      <Text tid="bugTrackerFeature1" />,
+      <Text tid="bugTrackerFeature2" />,
+      <Text tid="bugTrackerFeature3" />,
+      <Text tid="bugTrackerFeature4" />,
+      <Text tid="bugTrackerFeature5" />,
+      <Text tid="bugTrackerFeature6" />,
+    ]}
+    techStack={[
+      {
+        name: 'React 16',
+        logo: <FaReact className="w-12 h-12" style={{ color: '#00b7ff' }} />,
+      },
+      {
+        name: 'TypeScript',
+        logo: <SiTypescript className="w-12 h-12" style={{ color: '#007ACC' }} />,
+      },
+      {
+        name: 'Redux',
+        logo: <img src={Redux} className="w-12 h-12" alt="Redux Logo" />,
+      },
+      {
+        name: 'Material-UI',
+        logo: <SiMaterialUi className="w-12 h-12" style={{ color: '#757ce8' }} />,
+      },
+      {
+        name: 'NodeJS',
+        logo: <FaNodeJs className="w-12 h-12" style={{ color: '#6cc24a' }} />,
+      },
+      {
+        name: 'PostgreSQL',
+        logo: <SiPostgresql className="w-12 h-12" style={{ color: '#008bb9' }} />,
+      },
+    ]}
+  />,
+
   <DefaultProject
     name="OnboardList"
     imageFront={onboardlist}
     imageBack={onboardlistblog}
-    liveVersionLink={
-      "https://www.onboardlist.com/"
-    }
+    liveVersionLink={'https://www.onboardlist.com/'}
     hasLoginCredentials={false}
     projectShortDescription={<Text tid="oblSubheading" />}
     aboutProjectText={
@@ -59,29 +123,29 @@ const projectList = [
     ]}
     techStack={[
       {
-        name: "Sanity",
+        name: 'Sanity',
         logo: <img src={Sanity} className="w-12 h-12" alt="Sanity Logo" />,
       },
       {
-        name: "NextJS",
+        name: 'NextJS',
         logo: <img src={NextJS} className="w-12 h-12" alt="NextJS Logo" />,
       },
       {
-        name: "React 16",
-        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
+        name: 'React 16',
+        logo: <FaReact className="w-12 h-12" style={{ color: '#00b7ff' }} />,
       },
       {
-        name: "TypeScript",
-        logo: <SiTypescript className="w-12 h-12" style={{ color: "#007ACC" }} />,
+        name: 'TypeScript',
+        logo: <SiTypescript className="w-12 h-12" style={{ color: '#007ACC' }} />,
       },
       {
-        name: "Chakra",
+        name: 'Chakra',
         logo: <img src={Chakra} className="w-12 h-12" alt="Chakra Logo" />,
       },
       {
-        name: "PostgreSQL",
-        logo: <SiPostgresql className="w-12 h-12" style={{ color: "#008bb9" }} />
-      }
+        name: 'PostgreSQL',
+        logo: <SiPostgresql className="w-12 h-12" style={{ color: '#008bb9' }} />,
+      },
     ]}
   />,
 
@@ -109,34 +173,34 @@ const projectList = [
     ]}
     techStack={[
       {
-        name: "React Native",
+        name: 'React Native',
         logo: <img src={ReactNative} className="w-12 h-12" alt="React native Logo" />,
       },
       {
-        name: "Redux",
+        name: 'Redux',
         logo: <img src={Redux} className="w-12 h-12" alt="Redux Logo" />,
       },
       {
-        name: "D3.js",
+        name: 'D3.js',
         logo: <img src={d3js} className="w-12 h-12" alt="D3.js logo" />,
       },
       {
-        name: "Android",
-        logo: <SiAndroid className="w-12 h-12" style={{ color: "#78C257" }} />,
+        name: 'Android',
+        logo: <SiAndroid className="w-12 h-12" style={{ color: '#78C257' }} />,
       },
     ]}
   />,
 
   <DefaultProject
-    name={"Travelist"}
+    name={'Travelist'}
     imageFront={travelist}
     imageBack={travelistgithub}
-    githubLink={"https://github.com/jclk86/travelist-client"}
-    githubLink2={"https://github.com/jclk86/travelist-server"}
-    liveVersionLink={"https://travelist-client-clfox97sa.vercel.app/"}
+    githubLink={'https://github.com/jclk86/travelist-client'}
+    githubLink2={'https://github.com/jclk86/travelist-server'}
+    liveVersionLink={'https://travelist-client-clfox97sa.vercel.app/'}
     hasLoginCredentials={true}
-    userLogin={"CNorris"}
-    passwordLogin={"Password123!"}
+    userLogin={'CNorris'}
+    passwordLogin={'Password123!'}
     projectShortDescription={<Text tid="travSubheading" />}
     aboutProjectText={
       <div>
@@ -159,33 +223,33 @@ const projectList = [
     ]}
     techStack={[
       {
-        name: "HTML5",
-        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
+        name: 'HTML5',
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: '#dc4d25' }} />,
       },
       {
-        name: "CSS3",
-        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
+        name: 'CSS3',
+        logo: <FaCss3Alt className="w-12 h-12" style={{ color: '#258ec8' }} />,
       },
       {
-        name: "React 16",
-        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
+        name: 'React 16',
+        logo: <FaReact className="w-12 h-12" style={{ color: '#00b7ff' }} />,
       },
       {
-        name: "NodeJS",
-        logo: <FaNodeJs className="w-12 h-12" style={{ color: "#6cc24a" }} />,
+        name: 'NodeJS',
+        logo: <FaNodeJs className="w-12 h-12" style={{ color: '#6cc24a' }} />,
       },
       {
-        name: "Jest",
-        logo: <SiJest className="w-12 h-12" style={{ color: "A0475A" }} />,
+        name: 'Jest',
+        logo: <SiJest className="w-12 h-12" style={{ color: 'A0475A' }} />,
       },
       {
-        name: "Enzyme",
-        logo: <SiAirbnb className="w-12 h-12" style={{ color: "#FF585D" }} />,
+        name: 'Enzyme',
+        logo: <SiAirbnb className="w-12 h-12" style={{ color: '#FF585D' }} />,
       },
       {
-        name: "PostgreSQL",
-        logo: <SiPostgresql className="w-12 h-12" style={{ color: "#008bb9" }} />
-      }
+        name: 'PostgreSQL',
+        logo: <SiPostgresql className="w-12 h-12" style={{ color: '#008bb9' }} />,
+      },
     ]}
   />,
 
@@ -194,13 +258,11 @@ const projectList = [
     imageFront={stocked}
     imageBack={stockedgithub}
     hasLoginCredentials={true}
-    userLogin={"CNorris"}
-    passwordLogin={"Password123!"}
-    githubLink={"https://github.com/jclk86/Stocked-Client"}
-    githubLink2={"https://github.com/jclk86/Stocked-server"}
-    liveVersionLink={
-      "https://stocked-client-end.vercel.app"
-    }
+    userLogin={'CNorris'}
+    passwordLogin={'Password123!'}
+    githubLink={'https://github.com/jclk86/Stocked-Client'}
+    githubLink2={'https://github.com/jclk86/Stocked-server'}
+    liveVersionLink={'https://stocked-client-end.vercel.app'}
     projectShortDescription={<Text tid="stockSubheading" />}
     aboutProjectText={
       <div>
@@ -219,43 +281,41 @@ const projectList = [
     ]}
     techStack={[
       {
-        name: "HTML5",
-        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
+        name: 'HTML5',
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: '#dc4d25' }} />,
       },
       {
-        name: "CSS3",
-        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
+        name: 'CSS3',
+        logo: <FaCss3Alt className="w-12 h-12" style={{ color: '#258ec8' }} />,
       },
       {
-        name: "React 16",
-        logo: <FaReact className="w-12 h-12" style={{ color: "#00b7ff" }} />,
+        name: 'React 16',
+        logo: <FaReact className="w-12 h-12" style={{ color: '#00b7ff' }} />,
       },
       {
-        name: "NodeJS",
-        logo: <FaNodeJs className="w-12 h-12" style={{ color: "#6cc24a" }} />,
+        name: 'NodeJS',
+        logo: <FaNodeJs className="w-12 h-12" style={{ color: '#6cc24a' }} />,
       },
       {
-        name: "Jest",
-        logo: <SiJest className="w-12 h-12" style={{ color: "A0475A" }} />,
+        name: 'Jest',
+        logo: <SiJest className="w-12 h-12" style={{ color: 'A0475A' }} />,
       },
       {
-        name: "Enzyme",
-        logo: <SiAirbnb className="w-12 h-12" style={{ color: "#FF585D" }} />,
+        name: 'Enzyme',
+        logo: <SiAirbnb className="w-12 h-12" style={{ color: '#FF585D' }} />,
       },
       {
-        name: "PostgreSQL",
-        logo: <SiPostgresql className="w-12 h-12" style={{ color: "#008bb9" }} />
-      }
+        name: 'PostgreSQL',
+        logo: <SiPostgresql className="w-12 h-12" style={{ color: '#008bb9' }} />,
+      },
     ]}
   />,
   <DefaultProject
-    name={"Livable"}
+    name={'Livable'}
     imageFront={livable}
     imageBack={livablegithub}
-    githubLink={
-      "https://github.com/jclk86/Livable"
-    }
-    liveVersionLink={"https://jclk86.github.io/Livable/"}
+    githubLink={'https://github.com/jclk86/Livable'}
+    liveVersionLink={'https://jclk86.github.io/Livable/'}
     hasLoginCredentials={false}
     projectShortDescription={<Text tid="livableSubheading" />}
     aboutProjectText={
@@ -274,35 +334,33 @@ const projectList = [
     ]}
     techStack={[
       {
-        name: "HTML5",
-        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
+        name: 'HTML5',
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: '#dc4d25' }} />,
       },
       {
-        name: "CSS3",
-        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
+        name: 'CSS3',
+        logo: <FaCss3Alt className="w-12 h-12" style={{ color: '#258ec8' }} />,
       },
       {
-        name: "jQuery",
-        logo: <SiJquery className="w-12 h-12" style={{ color: " #0769AD" }} />,
+        name: 'jQuery',
+        logo: <SiJquery className="w-12 h-12" style={{ color: ' #0769AD' }} />,
       },
       {
-        name: "JavaScript",
-        logo: <DiJavascript className="w-12 h-12" style={{ color: "#F0DB4F" }} />,
+        name: 'JavaScript',
+        logo: <DiJavascript className="w-12 h-12" style={{ color: '#F0DB4F' }} />,
       },
       {
-        name: "Google Maps API",
-        logo: <SiGooglemaps className="w-12 h-12" style={{ color: "#DD4B3E" }} />,
+        name: 'Google Maps API',
+        logo: <SiGooglemaps className="w-12 h-12" style={{ color: '#DD4B3E' }} />,
       },
     ]}
   />,
   <DefaultProject
-    name={"Quiz App"}
+    name={'Quiz App'}
     imageFront={quizapp}
     imageBack={quizgithub}
-    githubLink={
-      "https://github.com/jclk86/quiz-app"
-    }
-    liveVersionLink={"https://jclk86.github.io/quiz-app/"}
+    githubLink={'https://github.com/jclk86/quiz-app'}
+    liveVersionLink={'https://jclk86.github.io/quiz-app/'}
     hasLoginCredentials={false}
     projectShortDescription={<Text tid="quizSubheading" />}
     aboutProjectText={
@@ -317,23 +375,23 @@ const projectList = [
     ]}
     techStack={[
       {
-        name: "HTML5",
-        logo: <FaHtml5 className="w-12 h-12" style={{ color: "#dc4d25" }} />,
+        name: 'HTML5',
+        logo: <FaHtml5 className="w-12 h-12" style={{ color: '#dc4d25' }} />,
       },
       {
-        name: "CSS3",
-        logo: <FaCss3Alt className="w-12 h-12" style={{ color: "#258ec8" }} />,
+        name: 'CSS3',
+        logo: <FaCss3Alt className="w-12 h-12" style={{ color: '#258ec8' }} />,
       },
       {
-        name: "jQuery",
-        logo: <SiJquery className="w-12 h-12" style={{ color: " #0769AD" }} />,
+        name: 'jQuery',
+        logo: <SiJquery className="w-12 h-12" style={{ color: ' #0769AD' }} />,
       },
       {
-        name: "JavaScript",
-        logo: <DiJavascript className="w-12 h-12" style={{ color: "#F0DB4F" }} />,
+        name: 'JavaScript',
+        logo: <DiJavascript className="w-12 h-12" style={{ color: '#F0DB4F' }} />,
       },
     ]}
-  />
+  />,
 ];
 
 export default projectList;
