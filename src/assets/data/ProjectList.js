@@ -43,7 +43,7 @@ const projectList = [
     name="Project Management App"
     imageFront={ScrumBoard}
     imageBack={Diagram}
-    githubLink={'https://github.com/jclk86/bug-tracker-server'}
+    githubLink2={'https://github.com/jclk86/bug-tracker-server'}
     hasLoginCredentials={true}
     projectShortDescription={<Text tid="bugTrackerSubheading" />}
     aboutProjectText={
